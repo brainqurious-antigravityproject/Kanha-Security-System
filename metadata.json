@@ -1,0 +1,7 @@
+{
+  "name": "KSS - Kanha Security System",
+  "description": "A world-class electronic security, safety, and automation company providing comprehensive solutions from design to maintenance.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
