@@ -3,46 +3,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => (
-  <footer className="py-16 md:py-24 border-t border-white/5 bg-[#030014]">
-    <div className="max-w-[95%] lg:max-w-[85%] 2xl:max-w-[80%] mx-auto px-4">
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 md:gap-24 mb-16 md:mb-24">
-        <div className="col-span-2 space-y-8 md:space-y-12 text-white">
-          <div className="flex items-center gap-3 md:gap-4">
-            <div className="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-[#00f2fe] to-[#7000ff] rounded-lg md:rounded-[1.2rem] flex items-center justify-center font-black text-white text-2xl md:text-3xl shadow-xl shadow-purple-500/20">K</div>
-            <span className="text-2xl md:text-4xl font-black tracking-tighter">KSS</span>
+  <footer className="bg-[#0B1F3A] py-20 border-t border-white/10 text-white">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+        <div className="col-span-1 md:col-span-2 space-y-8">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-[#2F80ED] rounded-[6px] flex items-center justify-center font-bold text-white text-2xl">K</div>
+            <span className="text-3xl font-bold font-montserrat uppercase tracking-tight">KSS</span>
           </div>
-          <p className="text-gray-500 max-w-sm text-sm md:text-lg leading-relaxed font-medium">
-            Kanha Security System is an electronic security, safety & automation leader based in New Delhi, India. 
-            Securing the world, one innovation at a time.
+          <p className="text-white/60 text-[17px] max-w-md font-inter leading-relaxed">
+            Industry leader in electronic security and automated protection. Committed to securing infrastructure with precision and innovation.
           </p>
         </div>
-        
-        <div className="space-y-6 md:space-y-10 text-white">
-          <h4 className="font-black text-sm md:text-xl uppercase tracking-widest text-white">Links</h4>
-          <ul className="space-y-4 md:space-y-6 text-gray-500 text-xs md:text-base font-bold">
-            <li><Link to="/" className="hover:text-[#00f2fe] transition-colors">Home</Link></li>
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">About</a></li>
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">Services</a></li>
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">Contact</a></li>
+
+        <div className="space-y-6">
+          <h4 className="text-[14px] font-bold text-[#2F80ED] uppercase tracking-widest font-montserrat">Navigation</h4>
+          <ul className="space-y-4 text-white/50 text-[14px] font-bold font-inter">
+            <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li><a href="/#about" className="hover:text-white transition-colors">About Us</a></li>
+            <li><Link to="/services" className="hover:text-white transition-colors">Platforms</Link></li>
+            <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
           </ul>
         </div>
 
-        <div className="space-y-6 md:space-y-10 text-white">
-          <h4 className="font-black text-sm md:text-xl uppercase tracking-widest text-white">Platform</h4>
-          <ul className="space-y-4 md:space-y-6 text-gray-500 text-xs md:text-base font-bold">
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">mPass</a></li>
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">LinQ2</a></li>
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">InfoShield</a></li>
-            <li><a href="#" className="hover:text-[#00f2fe] transition-colors">Cyber Sphere</a></li>
+        <div className="space-y-6">
+          <h4 className="text-[14px] font-bold text-[#2F80ED] uppercase tracking-widest font-montserrat">Information</h4>
+          <ul className="space-y-4 text-white/50 text-[14px] font-bold font-inter">
+            <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Cookies</a></li>
           </ul>
         </div>
       </div>
 
-      <div className="pt-12 md:pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 text-[10px] md:text-base text-gray-600 font-black uppercase tracking-widest text-center">
-        <p>© 2026 Kanha Security System. Engineered for excellence.</p>
-        <div className="flex gap-8 md:gap-12">
-          <a href="#" className="hover:text-white transition-colors">Privacy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms</a>
+      <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[14px] text-white/30 font-bold font-inter uppercase tracking-widest gap-6">
+        <p>© 2026 Kanha Security System. All rights reserved.</p>
+        <div className="flex gap-10">
+          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+          <a href="#" className="hover:text-white transition-colors">Twitter</a>
         </div>
       </div>
     </div>

@@ -15,22 +15,7 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMobileMenuOpen]);
-
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location.pathname]);
-
-  const NavLink = ({ to, children, id, onClick }: { to: string, children?: React.ReactNode, id?: string, onClick?: () => void }) => {
+  const NavLink = ({ to, children, id, onClick, mobile }: { to: string, children?: React.ReactNode, id?: string, onClick?: () => void, mobile?: boolean }) => {
     const handleClick = (e: React.MouseEvent) => {
       if (onClick) onClick();
       if (isHome && to.startsWith('#')) {
@@ -42,75 +27,64 @@ export const Navbar = () => {
       }
     };
 
-    if (isHome && to.startsWith('#')) {
+    const linkClasses = `text-[14px] font-semibold tracking-wide transition-colors ${
+      mobile ? 'text-[#0B1F3A] hover:text-[#2F80ED]' : (isScrolled ? 'text-[#0B1F3A] hover:text-[#2F80ED]' : 'text-white hover:text-[#2F80ED]')
+    }`;
+
+    // If it's a regular route (not an anchor on the current page)
+    if (!to.startsWith('#') || !isHome) {
       return (
-        <a href={to} onClick={handleClick} className="hover:text-white/80 md:hover:text-[#00f2fe] transition-colors uppercase tracking-widest text-xs font-bold block py-4 md:py-2">{children}</a>
+        <Link to={to} onClick={onClick} className={linkClasses}>{children}</Link>
       );
     }
+
+    // Anchor on home page
     return (
-      <Link to={id ? `/#${id}` : '/'} onClick={handleClick} className="hover:text-white/80 md:hover:text-[#00f2fe] transition-colors uppercase tracking-widest text-xs font-bold block py-4 md:py-2">{children}</Link>
+      <a href={to} onClick={handleClick} className={linkClasses}>{children}</a>
     );
   };
 
+  const navbarBg = isScrolled || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-[#0B1F3A]/90';
+  const textColor = isScrolled || isMobileMenuOpen ? 'text-[#0B1F3A]' : 'text-white';
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled ? 'bg-[#030014]/95 backdrop-blur-xl py-4 border-b border-white/5 shadow-2xl' : 'bg-transparent py-4 lg:py-6'}`}>
-      <div className="max-w-[95%] lg:max-w-[85%] 2xl:max-w-[80%] mx-auto px-4 flex justify-between items-center relative z-[110]">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#00f2fe] to-[#7000ff] rounded-lg flex items-center justify-center font-bold text-white text-lg lg:text-xl shadow-lg shadow-purple-500/20">
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 md:py-6 ${navbarBg}`}>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <Link to="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-[#2F80ED] rounded-[6px] flex items-center justify-center font-bold text-white text-xl">
             K
           </div>
-          <span className="text-xl lg:text-2xl font-black tracking-tighter text-white">KSS</span>
+          <span className={`text-2xl font-bold font-montserrat uppercase tracking-tight ${textColor}`}>KSS</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8 lg:gap-12 text-gray-400">
+        <div className="hidden md:flex items-center gap-10">
           <NavLink to="/">HOME</NavLink>
-          <NavLink to="#about" id="about">ABOUT</NavLink>
-          <NavLink to="#services" id="services">SERVICES</NavLink>
-          <NavLink to="#partners" id="partners">PARTNERS</NavLink>
-          <NavLink to="#contact" id="contact">CONTACT</NavLink>
+          <NavLink to="/#about">ABOUT</NavLink>
+          <NavLink to="/services">SERVICES</NavLink>
+          <NavLink to="/#partners">PARTNERS</NavLink>
+          <NavLink to="/#contact">CONTACT</NavLink>
         </div>
 
-        <div className="flex items-center gap-3 lg:gap-4">
-          <a href="tel:+919595959595" className="flex items-center gap-2 bg-[#00f2fe] text-[#030014] px-4 lg:px-6 py-2 rounded-full text-[10px] lg:text-xs font-black hover:bg-white transition-all uppercase tracking-widest shadow-lg shadow-cyan-500/20">
-            <Phone size={14} fill="currentColor" />
-            <span className="hidden sm:inline">+91 9595959595</span>
+        <div className="flex items-center gap-6">
+          <a href="tel:+919810021487" className="flex items-center gap-2 bg-[#2F80ED] text-white px-5 py-2.5 rounded-[6px] hover:brightness-110 transition-all font-bold text-[14px] shadow-sm">
+            <Phone size={16} />
+            <span className="hidden lg:inline">+919810021487</span>
           </a>
-          <button className="md:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button className={`${textColor} md:hidden`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay - Right to Left with Blue Gradient */}
-      <div className={`md:hidden fixed inset-0 z-[105] transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'visible' : 'invisible'}`}>
-        {/* Backdrop */}
-        <div className={`absolute inset-0 bg-black/60 transition-opacity duration-500 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} onClick={() => setIsMobileMenuOpen(false)}></div>
-        
-        {/* Drawer */}
-        <div className={`absolute top-0 right-0 w-[80%] h-full bg-gradient-to-br from-[#00f2fe] to-[#7000ff] shadow-2xl transition-transform duration-500 ease-in-out transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex flex-col h-full pt-24 pb-10 px-8 text-white">
-            <div className="flex flex-col gap-4 items-start w-full">
-              <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
-              <NavLink to="#about" id="about" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</NavLink>
-              <NavLink to="#services" id="services" onClick={() => setIsMobileMenuOpen(false)}>SERVICES</NavLink>
-              <NavLink to="#partners" id="partners" onClick={() => setIsMobileMenuOpen(false)}>PARTNERS</NavLink>
-              <NavLink to="#contact" id="contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
-            </div>
-            
-            <div className="mt-auto pt-10 border-t border-white/20">
-               <div className="flex flex-col items-start gap-2">
-                 <span className="text-[10px] uppercase font-black tracking-widest opacity-70">Support Line</span>
-                 <a href="tel:+919595959595" className="text-xl font-black flex items-center gap-3">
-                   <Phone size={20} /> +91 9595959595
-                 </a>
-               </div>
-               <button className="w-full mt-6 bg-white text-[#7000ff] py-4 rounded-xl text-xs font-black uppercase tracking-widest shadow-lg">
-                 PARTNER LOGIN
-               </button>
-            </div>
-          </div>
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t p-6 shadow-xl flex flex-col gap-6 animate-in slide-in-from-top duration-300">
+          <NavLink to="/" mobile onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
+          <NavLink to="/#about" mobile onClick={() => setIsMobileMenuOpen(false)}>ABOUT</NavLink>
+          <NavLink to="/services" mobile onClick={() => setIsMobileMenuOpen(false)}>SERVICES</NavLink>
+          <NavLink to="/#partners" mobile onClick={() => setIsMobileMenuOpen(false)}>PARTNERS</NavLink>
+          <NavLink to="/#contact" mobile onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

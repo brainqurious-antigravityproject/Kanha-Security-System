@@ -1,96 +1,183 @@
-
-import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { 
-  ArrowLeft, CheckCircle, Building, Shield, Lock, Camera, Flame, 
-  Fence, Video, Network, Megaphone, Search, Car, Database, 
-  Lightbulb, Zap, Droplets 
+  ArrowLeft, CheckCircle, ChevronRight, Plus, Minus,
+  Building, Shield, Lock, Camera, Flame, Fence, Video, Network, Megaphone, Search, Car, Database, Lightbulb, Zap, Droplets 
 } from 'lucide-react';
 import { SERVICES } from './constants';
+
+const FAQItem: React.FC<{ faq: { question: string; answer: string }; isOpen: boolean; toggle: () => void }> = ({ faq, isOpen, toggle }) => (
+  <div className="border-b border-gray-100 last:border-0">
+    <button 
+      onClick={toggle}
+      className="w-full py-5 md:py-6 flex items-center justify-between text-left group"
+    >
+      <span className={`text-[16px] md:text-[17px] font-bold font-montserrat transition-colors ${isOpen ? 'text-[#2F80ED]' : 'text-[#0B1F3A] group-hover:text-[#2F80ED]'}`}>
+        {faq.question}
+      </span>
+      <div className={`shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#2F80ED] text-white rotate-180' : 'bg-gray-100 text-[#0B1F3A]'}`}>
+        {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+      </div>
+    </button>
+    <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <p className="text-[15px] md:text-[16px] text-[#6B7280] leading-relaxed font-inter">
+        {faq.answer}
+      </p>
+    </div>
+  </div>
+);
 
 export const ServiceDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const service = SERVICES.find(s => s.id === id);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
 
-  if (!service) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#030014]">
-        <div className="text-center px-6">
-          <h1 className="text-3xl md:text-4xl font-black mb-8 text-white">Service Not Found</h1>
-          <button onClick={() => navigate('/')} className="text-[#00f2fe] font-black flex items-center gap-3 mx-auto uppercase tracking-widest">
-            <ArrowLeft /> BACK TO HOME
-          </button>
-        </div>
-      </div>
-    );
-  }
+  if (!service) return null;
 
-  const IconComponent = {
+  const IconComponent = ({
     Building, Shield, Lock, Camera, Flame, Fence, Video, Network, Megaphone, Search, Car, Database, Lightbulb, Zap, Droplets
-  }[service.icon] || Shield;
+  } as any)[service.icon] || Shield;
 
   return (
-    <div className="bg-[#030014] min-h-screen overflow-x-hidden">
-      <div className="pt-32 md:pt-40 lg:pt-52 pb-20 md:pb-32 px-4 md:px-6 max-w-[95%] lg:max-w-[85%] 2xl:max-w-[80%] mx-auto">
-        <button 
-          onClick={() => navigate(-1)} 
-          className="mb-12 md:mb-20 flex items-center gap-3 md:gap-4 text-gray-500 hover:text-white transition-colors font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm"
-        >
-          <ArrowLeft size={20} /> Go Back
-        </button>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 lg:gap-40 items-start">
-          <div className="space-y-10 md:space-y-16">
-            <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl md:rounded-[2rem] bg-gradient-to-br from-[#00f2fe]/20 to-[#7000ff]/20 flex items-center justify-center shadow-2xl shadow-purple-500/10">
-              <IconComponent className="text-[#00f2fe] w-8 h-8 md:w-12 md:h-12" />
+    <div className="bg-[#F5F7FA] min-h-screen text-[#0B1F3A]">
+      {/* Detail Header & Breadcrumbs */}
+      <div className="pt-28 md:pt-36 pb-12 md:pb-20 bg-[#0B1F3A] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 pointer-events-none" 
+             style={{ backgroundImage: 'radial-gradient(#2F80ED 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
+        
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+          <nav className="flex flex-wrap items-center gap-y-2 gap-x-2 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-white/40 mb-8 md:mb-12 font-inter">
+            <Link to="/" className="hover:text-[#2F80ED] transition-colors">Home</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <Link to="/services" className="hover:text-[#2F80ED] transition-colors">Services</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <span className="text-[#2F80ED] truncate max-w-[150px] md:max-w-none">{service.title}</span>
+          </nav>
+          
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
+            <div className="space-y-4">
+              <h1 className="text-[28px] md:text-[48px] lg:text-[56px] font-bold text-white font-montserrat uppercase leading-[1.2] md:leading-[1.1] tracking-tight">
+                {service.title}
+              </h1>
+              <div className="w-16 md:w-20 h-1 bg-[#2F80ED]" />
             </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black leading-[1] md:leading-[0.85] text-white tracking-tighter">
-              {service.title}
-            </h1>
-            <p className="text-base md:text-2xl text-gray-400 leading-relaxed font-semibold opacity-80">
-              {service.description}
-            </p>
-            
-            <div className="glass-card p-8 md:p-16 rounded-[2rem] md:rounded-[4rem] border-white/5 shadow-2xl">
-              <h3 className="text-xl md:text-3xl font-black mb-8 md:mb-12 flex items-center gap-3 md:gap-5 text-white">
-                <CheckCircle className="text-[#00f2fe] w-6 h-6 md:w-10 md:h-10" /> CORE SPECS
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                {service.features.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-4 md:gap-6 p-5 md:p-8 bg-white/[0.02] rounded-xl md:rounded-[2rem] border border-white/5 hover:border-[#00f2fe]/40 transition-all group">
-                    <span className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#7000ff] mt-2 shrink-0 group-hover:scale-125 transition-transform shadow-[0_0_15px_#7000ff]"></span>
-                    <span className="text-sm md:text-lg font-black text-gray-300 uppercase tracking-tighter text-white">{feature}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="hidden md:flex w-20 h-20 lg:w-24 lg:h-24 bg-[#2F80ED]/10 rounded-2xl items-center justify-center text-[#2F80ED] border border-[#2F80ED]/20">
+              <IconComponent size={40} className="lg:size-12" />
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className="space-y-10 md:space-y-16 lg:sticky lg:top-40">
-            <div className="glass-card rounded-[2rem] md:rounded-[5rem] overflow-hidden border border-white/5 relative group shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent z-10" />
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
+          
+          {/* Main Visual Area - Prioritized for all screens */}
+          <div className="lg:col-span-6 lg:order-2 space-y-8">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 group aspect-video lg:aspect-square md:aspect-video">
               <img 
                 src={service.imageUrl} 
                 alt={service.title} 
-                className="w-full h-auto aspect-video object-cover opacity-60 group-hover:scale-110 group-hover:opacity-80 transition-all duration-[2000ms]"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" 
               />
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-8">
-               <button className="flex-1 bg-gradient-to-r from-[#00f2fe] to-[#7000ff] text-white py-4 md:py-6 rounded-xl md:rounded-[2rem] font-black text-base md:text-xl hover:scale-105 transition-all shadow-2xl shadow-purple-500/20 uppercase tracking-widest">
-                 BOOK CONSULTATION
-               </button>
-               <button className="flex-1 bg-white/5 hover:bg-white/10 text-white py-4 md:py-6 rounded-xl md:rounded-[2rem] font-black text-base md:text-xl border border-white/10 transition-all uppercase tracking-widest">
-                 RESOURCES
-               </button>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <button className="py-4 bg-[#0B1F3A] text-white font-bold rounded-lg uppercase tracking-widest text-[11px] md:text-[12px] hover:bg-[#2F80ED] transition-all">
+                Download Brochure
+              </button>
+              <button className="py-4 border-2 border-[#0B1F3A] text-[#0B1F3A] font-bold rounded-lg uppercase tracking-widest text-[11px] md:text-[12px] hover:bg-[#0B1F3A] hover:text-white transition-all">
+                Specifications
+              </button>
             </div>
           </div>
+
+          {/* Text Content Area */}
+          <div className="lg:col-span-6 lg:order-1 space-y-12">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-[16px] md:text-[19px] leading-[1.7] md:leading-[1.8] text-[#4B5563] font-inter">
+                {service.description}
+              </p>
+            </div>
+
+            {/* Features Section */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#2F80ED]/5 rounded-bl-full -z-0" />
+              <div className="relative z-10">
+                <h3 className="text-[20px] md:text-[22px] font-bold text-[#0B1F3A] mb-8 font-montserrat uppercase flex items-center gap-3">
+                  <span className="w-1.5 h-8 bg-[#2F80ED] rounded-full" />
+                  SYSTEM FEATURES
+                </h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {service.features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-4 p-4 bg-[#F9FAFB] rounded-xl border border-gray-50 group hover:border-[#2F80ED]/30 transition-all">
+                      <CheckCircle className="text-[#2F80ED] shrink-0 mt-0.5" size={18} />
+                      <span className="text-[14px] md:text-[15px] font-bold text-[#1F2937] font-inter leading-relaxed">
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            {service.ctaText && (
+              <div className="bg-[#2F80ED] rounded-2xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:bg-white/20 transition-all" />
+                <div className="relative z-10 space-y-6 md:space-y-8">
+                  <h3 className="text-[24px] md:text-[34px] font-bold font-montserrat uppercase leading-tight">
+                    Start your security <br className="hidden md:block" /> Transformation
+                  </h3>
+                  <p className="text-[16px] md:text-[18px] opacity-90 font-inter max-w-lg">
+                    {service.ctaText}
+                  </p>
+                  <button className="bg-white text-[#2F80ED] w-full md:w-auto px-10 py-4 md:py-5 rounded-lg font-bold text-[14px] md:text-[15px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-lg font-montserrat">
+                    Book Consultation
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
+
+        {/* FAQ Section */}
+        {service.faqs && service.faqs.length > 0 && (
+          <div className="mt-20 md:mt-32 pt-16 md:pt-20 border-t border-gray-100">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+              <div className="lg:col-span-4 space-y-6">
+                <div className="flex items-center gap-3">
+                  <span className="w-8 h-[2px] bg-[#2F80ED]"></span>
+                  <span className="text-[11px] md:text-[12px] font-bold text-[#2F80ED] uppercase tracking-[0.3em] font-inter">Solution Insights</span>
+                </div>
+                <h2 className="text-[28px] md:text-[32px] font-bold text-[#0B1F3A] font-montserrat uppercase leading-tight">
+                  SERVICE <br />
+                  <span className="text-[#2F80ED]">FAQS</span>
+                </h2>
+                <p className="text-[15px] md:text-[16px] text-[#6B7280] font-inter leading-relaxed">
+                  Deep dive into technical and operational details for {service.title}.
+                </p>
+              </div>
+
+              <div className="lg:col-span-8 bg-white border border-gray-100 rounded-2xl p-6 md:p-12 shadow-sm">
+                <div className="divide-y divide-gray-100">
+                  {service.faqs.map((faq, idx) => (
+                    <FAQItem 
+                      key={idx} 
+                      faq={faq} 
+                      isOpen={openFaqIndex === idx} 
+                      toggle={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)} 
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

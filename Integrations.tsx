@@ -3,40 +3,41 @@ import React from 'react';
 import { PARTNER_LOGOS } from './constants';
 
 export const Integrations = () => {
-  const row1 = PARTNER_LOGOS.slice(0, Math.ceil(PARTNER_LOGOS.length / 2));
-  const row2 = PARTNER_LOGOS.slice(Math.ceil(PARTNER_LOGOS.length / 2));
+  const line1 = PARTNER_LOGOS.slice(0, 12);
+  const line2 = PARTNER_LOGOS.slice(12, 24);
 
   return (
-    <section className="py-12 lg:py-24 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_#7000ff15_0%,_transparent_70%)] opacity-60"></div>
-      <div className="max-w-full mx-auto text-center relative z-10">
-        <div className="px-4">
-          <span className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-[0.3em] md:tracking-[0.4em] mb-4 block">Ecosystem</span>
-          <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white mb-6 md:mb-8 leading-[1] md:leading-[0.9]">SMART <span className="gradient-text">INTEGRATIONS</span></h2>
-          <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 md:mb-16 leading-relaxed font-medium">Integrate seamlessly with 100+ tools. We are authorized dealers for prestigious global brands.</p>
+    <section className="py-24 bg-[#F5F7FA] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-16">
+        <div className="text-center space-y-4">
+          <span className="text-[14px] font-bold text-[#2F80ED] uppercase tracking-widest block font-inter">Ecosystem</span>
+          <h2 className="text-[36px] font-semibold text-[#0B1F3A] font-montserrat uppercase">Seamless Integrations</h2>
+          <p className="text-[17px] text-[#6B7280] max-w-2xl mx-auto font-inter">
+            Our systems connect with industry-leading technologies to ensure a robust security network.
+          </p>
         </div>
-        
-        <div className="space-y-6 md:space-y-10">
-          {/* Row 1: Left to Right */}
-          <div className="relative w-full overflow-hidden py-2">
-            <div className="animate-marquee-ltr flex gap-4 md:gap-8">
-              {[...row1, ...row1, ...row1, ...row1].map((name, i) => (
-                <div key={i} className="glass-card px-6 md:px-10 py-4 md:py-6 rounded-full flex items-center justify-center grayscale hover:grayscale-0 transition-all group hover:scale-105 hover:bg-white/10 duration-500 border-white/5 whitespace-nowrap">
-                  <span className="text-xs md:text-xl font-black text-white/30 group-hover:text-white uppercase tracking-tighter">{name}</span>
-                </div>
-              ))}
-            </div>
+      </div>
+      
+      <div className="space-y-8 marquee-container">
+        {/* Line 1: Left to Right */}
+        <div className="w-screen relative left-1/2 -ml-[50vw] overflow-hidden">
+          <div className="animate-marquee-ltr flex gap-8 items-center">
+            {[...line1, ...line1, ...line1].map((name, i) => (
+              <div key={i} className="bg-white px-10 py-6 rounded-[12px] flex items-center justify-center border border-gray-100 shadow-sm min-w-[200px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:border-[#2F80ED] transition-all duration-300 cursor-default">
+                <span className="text-[15px] font-bold text-[#0B1F3A] font-montserrat uppercase tracking-tight">{name}</span>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Row 2: Right to Left */}
-          <div className="relative w-full overflow-hidden py-2">
-            <div className="animate-marquee-rtl flex gap-4 md:gap-8">
-              {[...row2, ...row2, ...row2, ...row2].map((name, i) => (
-                <div key={i} className="glass-card px-6 md:px-10 py-4 md:py-6 rounded-full flex items-center justify-center grayscale hover:grayscale-0 transition-all group hover:scale-105 hover:bg-white/10 duration-500 border-white/5 whitespace-nowrap">
-                  <span className="text-xs md:text-xl font-black text-white/30 group-hover:text-white uppercase tracking-tighter">{name}</span>
-                </div>
-              ))}
-            </div>
+        {/* Line 2: Right to Left */}
+        <div className="w-screen relative left-1/2 -ml-[50vw] overflow-hidden">
+          <div className="animate-marquee-rtl flex gap-8 items-center">
+            {[...line2, ...line2, ...line2].map((name, i) => (
+              <div key={i} className="bg-white px-10 py-6 rounded-[12px] flex items-center justify-center border border-gray-100 shadow-sm min-w-[200px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:border-[#2F80ED] transition-all duration-300 cursor-default">
+                <span className="text-[15px] font-bold text-[#0B1F3A] font-montserrat uppercase tracking-tight">{name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

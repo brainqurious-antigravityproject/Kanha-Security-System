@@ -6,6 +6,8 @@ export interface Service {
   features: string[];
   icon: string;
   imageUrl: string;
+  ctaText?: string;
+  faqs?: { question: string; answer: string }[];
 }
 
 export interface Partner {

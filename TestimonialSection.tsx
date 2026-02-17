@@ -1,72 +1,115 @@
 
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, Shield } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { TESTIMONIALS } from './constants';
 
 export const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 2;
-  const maxIndex = TESTIMONIALS.length - itemsPerPage;
-
-  const handlePrev = () => {
-    setCurrentIndex(prev => Math.max(0, prev - itemsPerPage));
-  };
+  const t = TESTIMONIALS[currentIndex];
 
   const handleNext = () => {
-    setCurrentIndex(prev => Math.min(maxIndex, prev + itemsPerPage));
+    setCurrentIndex((c) => (c + 1) % TESTIMONIALS.length);
   };
 
-  const visibleTestimonials = TESTIMONIALS.slice(currentIndex, currentIndex + itemsPerPage);
+  const handlePrev = () => {
+    setCurrentIndex((c) => (c - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  };
 
   return (
-    <section className="py-12 lg:py-24 bg-[#030014]/50">
-      <div className="max-w-[95%] lg:max-w-[85%] 2xl:max-w-[80%] mx-auto px-4">
-        {/* Header with Navigation Buttons */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6">
-          <div className="text-left">
-            <span className="text-[10px] md:text-xs font-bold text-[#00f2fe] tracking-[0.3em] md:tracking-[0.4em] uppercase mb-4 block">Feedback</span>
-            <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-[1] md:leading-[0.9]">CLIENT <br /><span className="gradient-text">INSIGHTS</span></h2>
-            <p className="text-sm md:text-xl text-gray-400 mt-4 max-w-xl font-medium">Trusted by leading enterprises and large organizations globally.</p>
-          </div>
-
-          <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-            <button 
-              onClick={handlePrev}
-              disabled={currentIndex === 0}
-              className={`p-4 md:p-6 rounded-full border border-white/10 bg-white/5 transition-all flex items-center justify-center ${currentIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'hover:bg-[#00f2fe] hover:text-[#030014] hover:border-[#00f2fe]'}`}
-            >
-              <ArrowLeft size={24} />
-            </button>
-            <button 
-              onClick={handleNext}
-              disabled={currentIndex >= maxIndex}
-              className={`p-4 md:p-6 rounded-full border border-white/10 bg-white/5 transition-all flex items-center justify-center ${currentIndex >= maxIndex ? 'opacity-30 cursor-not-allowed' : 'hover:bg-[#00f2fe] hover:text-[#030014] hover:border-[#00f2fe]'}`}
-            >
-              <ArrowRight size={24} />
-            </button>
-          </div>
-        </div>
-
-        {/* Testimonials Grid with Smooth Transition */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 overflow-hidden relative min-h-[300px]">
-          {visibleTestimonials.map((t, i) => (
-            <div 
-              key={`${currentIndex}-${i}`} 
-              className="glass-card p-6 md:p-10 rounded-[2rem] md:rounded-[4rem] relative overflow-hidden group hover:bg-white/5 transition-all duration-700 animate-slideUp"
-            >
-              <div className="absolute top-0 right-0 p-6 md:p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                <Shield className="w-24 h-24 md:w-32 md:h-32 text-white" />
+    <section className="py-32 bg-[#0B1F3A] text-white overflow-hidden relative">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+           style={{ backgroundImage: 'radial-gradient(#ffffff 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+          
+          {/* Left Column: Editorial Content */}
+          <div className="lg:col-span-5 space-y-12">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <span className="w-8 h-[2px] bg-[#2F80ED]"></span>
+                <span className="text-[12px] font-bold text-[#2F80ED] uppercase tracking-[0.4em] font-inter">
+                  Executive Endorsements
+                </span>
               </div>
-              <p className="text-base md:text-2xl text-gray-200 mb-6 md:mb-10 italic leading-relaxed font-semibold">"{t.content}"</p>
-              <div className="flex items-center gap-4 md:gap-6">
-                <img src={t.avatar} alt={t.name} className="w-12 h-12 md:w-20 md:h-20 rounded-xl md:rounded-[2rem] grayscale group-hover:grayscale-0 transition-all object-cover border-2 border-white/10" />
-                <div>
-                  <h4 className="text-base md:text-2xl font-black text-white">{t.name}</h4>
-                  <p className="text-[10px] md:text-sm text-[#00f2fe] uppercase font-black tracking-[0.15em] md:tracking-[0.2em] mt-1 md:mt-2">{t.role}</p>
+              <h2 className="text-[44px] md:text-[56px] font-bold font-montserrat uppercase leading-[1] tracking-tight">
+                TRUSTED BY <br />
+                <span className="text-white/40">THE BEST</span>
+              </h2>
+              <p className="text-[17px] text-white/50 font-inter max-w-sm leading-relaxed">
+                Our commitment to precision has earned us the trust of industry leaders across India.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-8">
+              <div className="flex flex-col font-montserrat">
+                <span className="text-sm font-bold text-[#2F80ED] uppercase tracking-widest mb-1">Index</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl font-bold">{(currentIndex + 1).toString().padStart(2, '0')}</span>
+                  <span className="text-lg text-white/20">/ {TESTIMONIALS.length.toString().padStart(2, '0')}</span>
+                </div>
+              </div>
+              
+              <div className="flex gap-2">
+                <button 
+                  onClick={handlePrev}
+                  className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-[#0B1F3A] transition-all duration-300 active:scale-95"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button 
+                  onClick={handleNext}
+                  className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-[#0B1F3A] transition-all duration-300 active:scale-95"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Professional Testimonial Card */}
+          <div className="lg:col-span-7 relative">
+            <div 
+              key={currentIndex} 
+              className="bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] relative text-[#0B1F3A] animate-in fade-in slide-in-from-right-8 duration-500 border-t-4 border-[#2F80ED]"
+            >
+              {/* Refined Quote Watermark */}
+              <div className="absolute top-8 right-12 opacity-[0.04]">
+                <Quote size={120} strokeWidth={1} fill="currentColor" />
+              </div>
+
+              <div className="p-10 md:p-16 space-y-10">
+                <div className="relative z-10">
+                  <Quote size={32} className="text-[#2F80ED] mb-6 opacity-40" fill="currentColor" />
+                  <p className="text-[20px] md:text-[24px] font-medium leading-[1.6] font-inter text-[#1F2937]">
+                    {t.content}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-6 pt-10 border-t border-gray-100 relative z-10">
+                  <div className="relative">
+                    <img 
+                      src={t.avatar} 
+                      alt={t.name}
+                      className="w-20 h-20 object-cover rounded-2xl border-2 border-gray-50 shadow-sm"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-[20px] font-bold font-montserrat uppercase tracking-tight">
+                      {t.name}
+                    </h4>
+                    <p className="text-[#2F80ED] font-bold text-[13px] uppercase tracking-[0.2em] font-inter">
+                      {t.role}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
+
+            {/* Subtle background glow to add depth without clutter */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#2F80ED]/20 blur-[120px] opacity-30 rounded-full" />
+          </div>
         </div>
       </div>
     </section>

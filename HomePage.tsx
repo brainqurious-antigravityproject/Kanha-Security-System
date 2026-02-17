@@ -5,6 +5,7 @@ import { StatsSection } from './StatsSection';
 import { ServicesGrid } from './ServicesGrid';
 import { Integrations } from './Integrations';
 import { TestimonialSection } from './TestimonialSection';
+import { FAQSection } from './FAQSection';
 import { ContactSection } from './ContactSection';
 
 export const HomePage = () => (
@@ -14,6 +15,7 @@ export const HomePage = () => (
     <ServicesGrid />
     <Integrations />
     <TestimonialSection />
+    <FAQSection />
     <ContactSection />
   </>
 );

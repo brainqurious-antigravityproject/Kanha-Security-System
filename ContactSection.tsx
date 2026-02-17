@@ -1,69 +1,94 @@
 
 import React from 'react';
-import { Phone, Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export const ContactSection = () => (
-  <section id="contact" className="py-12 lg:py-24">
-    <div className="max-w-[95%] lg:max-w-[85%] 2xl:max-w-[80%] mx-auto px-4">
-      <div className="glass-card rounded-[3rem] lg:rounded-[5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-white/5">
-        <div className="p-6 md:p-16 lg:p-20 space-y-10 md:space-y-16">
-          <div className="text-left">
-            <h2 className="text-4xl sm:text-6xl font-black text-white mb-6 md:mb-8 leading-none whitespace-nowrap">LET'S <span className="gradient-text">TALK</span></h2>
-            <p className="text-sm md:text-xl text-gray-400 leading-relaxed font-medium">Ready to secure your digital and physical infrastructure? Our team is available 24/7.</p>
+  <section id="contact" className="py-20 md:py-32 bg-[#F5F7FA]">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+        <div className="space-y-12 md:space-y-16">
+          <div className="space-y-4 md:space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="w-10 h-[2px] bg-[#2F80ED]"></span>
+              <span className="text-[14px] font-bold text-[#2F80ED] uppercase tracking-widest font-inter">Expert Consultation</span>
+            </div>
+            <h2 className="text-[32px] md:text-[42px] font-bold text-[#0B1F3A] font-montserrat uppercase leading-tight">
+              Let's Secure <br className="hidden md:block" /> Your Future
+            </h2>
+            <p className="text-[16px] md:text-[18px] text-[#6B7280] font-inter max-w-lg leading-relaxed">
+              Our engineering team is ready to design a custom security ecosystem tailored to your specific organizational needs.
+            </p>
           </div>
 
-          <div className="space-y-8 md:space-y-12">
-            <div className="flex flex-row items-center gap-4 md:gap-8 group text-left">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.2rem] md:rounded-[1.5rem] bg-[#00f2fe]/10 flex items-center justify-center border border-[#00f2fe]/20 group-hover:scale-110 transition-all shrink-0">
-                <Phone className="text-[#00f2fe] w-5 h-5 md:w-7 md:h-7" />
+          <div className="space-y-8 md:space-y-10">
+            {/* Phone */}
+            <div className="flex items-center sm:items-start gap-5 md:gap-8 group">
+              <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 bg-white shadow-sm border border-gray-100 rounded-[12px] flex items-center justify-center text-[#2F80ED] group-hover:bg-[#2F80ED] group-hover:text-white transition-all duration-300">
+                <Phone size={20} className="md:size-6" />
               </div>
-              <div>
-                <h4 className="text-base md:text-xl font-black text-white mb-1 md:mb-2 uppercase tracking-widest">Phone</h4>
-                <p className="text-gray-400 text-sm md:text-lg font-bold">+91 9810021487</p>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-4 md:gap-8 group text-left">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.2rem] md:rounded-[1.5rem] bg-[#7000ff]/10 flex items-center justify-center border border-[#7000ff]/20 group-hover:scale-110 transition-all shrink-0">
-                <Mail className="text-[#7000ff] w-5 h-5 md:w-7 md:h-7" />
-              </div>
-              <div>
-                <h4 className="text-base md:text-xl font-black text-white mb-1 md:mb-2 uppercase tracking-widest">Email</h4>
-                <p className="text-gray-400 text-sm md:text-lg font-bold break-all">info.kssystem19@gmail.com</p>
+              <div className="flex-1">
+                <h4 className="text-[12px] font-bold text-[#6B7280] uppercase tracking-widest mb-1 font-inter">Direct Line</h4>
+                <p className="text-[18px] md:text-[22px] font-bold text-[#0B1F3A] font-montserrat">+91 9810021487</p>
               </div>
             </div>
-          </div>
 
-          <div className="flex justify-start gap-6 md:gap-8">
-            {[Facebook, Twitter, Linkedin].map((Icon, i) => (
-              <a key={i} href="#" className="w-12 h-12 md:w-14 md:h-14 rounded-[1rem] md:rounded-[1.2rem] border border-white/5 flex items-center justify-center hover:bg-[#00f2fe] hover:text-[#030014] hover:border-[#00f2fe] transition-all duration-500">
-                <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
-              </a>
-            ))}
+            {/* Email */}
+            <div className="flex items-center sm:items-start gap-5 md:gap-8 group">
+              <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 bg-white shadow-sm border border-gray-100 rounded-[12px] flex items-center justify-center text-[#2F80ED] group-hover:bg-[#2F80ED] group-hover:text-white transition-all duration-300">
+                <Mail size={20} className="md:size-6" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-[12px] font-bold text-[#6B7280] uppercase tracking-widest mb-1 font-inter">Email Inquiries</h4>
+                <p className="text-[16px] sm:text-[18px] md:text-[22px] font-bold text-[#0B1F3A] font-montserrat break-words">info.kssystem19@gmail.com</p>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="flex items-center sm:items-start gap-5 md:gap-8 group">
+              <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 bg-white shadow-sm border border-gray-100 rounded-[12px] flex items-center justify-center text-[#2F80ED] group-hover:bg-[#2F80ED] group-hover:text-white transition-all duration-300">
+                <MapPin size={20} className="md:size-6" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-[12px] font-bold text-[#6B7280] uppercase tracking-widest mb-1 font-inter">Headquarters</h4>
+                <p className="text-[18px] md:text-[22px] font-bold text-[#0B1F3A] font-montserrat">New Delhi, India</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="bg-white/[0.01] p-6 md:p-16 lg:p-20 border-t lg:border-t-0 lg:border-l border-white/5">
-          <form className="space-y-6 md:space-y-10" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-              <div className="space-y-2 md:space-y-3">
-                <label className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-[0.2em]">First Name</label>
-                <input type="text" className="w-full bg-black/40 border border-white/5 rounded-xl md:rounded-2xl px-6 md:px-8 py-3 md:py-4 focus:border-[#00f2fe] focus:outline-none transition-all text-white font-bold" placeholder="Alex" />
+        <div className="bg-white p-8 md:p-12 rounded-[24px] shadow-xl border border-gray-100 relative overflow-hidden z-0">
+          {/* Decorative accent - Moved to back layer with -z-10 and adjusted opacity */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#2F80ED]/10 rounded-bl-full pointer-events-none -z-10 translate-x-12 -translate-y-12" />
+          
+          <form className="space-y-6 md:space-y-8 relative z-10" onSubmit={(e) => e.preventDefault()}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Full Name</label>
+                <input 
+                  type="text" 
+                  className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#2F80ED]/20 focus:border-[#2F80ED] outline-none transition-all font-inter" 
+                  placeholder="John Doe" 
+                />
               </div>
-              <div className="space-y-2 md:space-y-3">
-                <label className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-[0.2em]">Last Name</label>
-                <input type="text" className="w-full bg-black/40 border border-white/5 rounded-xl md:rounded-2xl px-6 md:px-8 py-3 md:py-4 focus:border-[#00f2fe] focus:outline-none transition-all text-white font-bold" placeholder="Rivers" />
+              <div className="space-y-2">
+                <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Email Address</label>
+                <input 
+                  type="email" 
+                  className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#2F80ED]/20 focus:border-[#2F80ED] outline-none transition-all font-inter" 
+                  placeholder="john@example.com" 
+                />
               </div>
             </div>
-            <div className="space-y-2 md:space-y-3">
-              <label className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-[0.2em]">Work Email</label>
-              <input type="email" className="w-full bg-black/40 border border-white/5 rounded-xl md:rounded-2xl px-6 md:px-8 py-3 md:py-4 focus:border-[#00f2fe] focus:outline-none transition-all text-white font-bold" placeholder="alex@corporate.com" />
+            <div className="space-y-2">
+              <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">How can we help?</label>
+              <textarea 
+                rows={4} 
+                className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#2F80ED]/20 focus:border-[#2F80ED] outline-none transition-all resize-none font-inter" 
+                placeholder="Tell us about your project requirements..."
+              ></textarea>
             </div>
-            <div className="space-y-2 md:space-y-3">
-              <label className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-[0.2em]">Message</label>
-              <textarea rows={4} className="w-full bg-black/40 border border-white/5 rounded-xl md:rounded-2xl px-6 md:px-8 py-3 md:py-4 focus:border-[#00f2fe] focus:outline-none transition-all text-white font-bold resize-none" placeholder="Tell us about your requirements..."></textarea>
-            </div>
-            <button className="w-full bg-gradient-to-r from-[#00f2fe] to-[#7000ff] text-white py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-lg md:text-xl hover:opacity-90 transition-all shadow-2xl shadow-purple-500/40 uppercase tracking-[0.2em]">
-              SEND ENQUIRY
+            <button className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[16px] uppercase tracking-widest rounded-[8px] hover:bg-[#2F80ED] transition-all duration-300 font-montserrat shadow-lg transform active:scale-[0.98]">
+              Send Inquiry
             </button>
           </form>
         </div>
