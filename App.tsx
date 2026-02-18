@@ -7,6 +7,7 @@ import { AboutPage } from './AboutPage';
 import { ServicesPage } from './ServicesPage';
 import { ServiceDetailPage } from './ServiceDetailPage';
 import { PartnersPage } from './PartnersPage';
+import { ContactPage } from './ContactPage';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:id" element={<ServiceDetailPage />} />
             <Route path="/partners" element={<PartnersPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />

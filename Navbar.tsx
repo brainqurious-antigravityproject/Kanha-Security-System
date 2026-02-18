@@ -61,7 +61,7 @@ export const Navbar = () => {
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/services">SERVICES</NavLink>
           <NavLink to="/partners">PARTNERS</NavLink>
-          <NavLink to="/#contact">CONTACT</NavLink>
+          <NavLink to="/contact">CONTACT</NavLink>
         </div>
 
         <div className="flex items-center gap-6">
@@ -81,7 +81,7 @@ export const Navbar = () => {
           <NavLink to="/about" mobile onClick={() => setIsMobileMenuOpen(false)}>ABOUT</NavLink>
           <NavLink to="/services" mobile onClick={() => setIsMobileMenuOpen(false)}>SERVICES</NavLink>
           <NavLink to="/partners" mobile onClick={() => setIsMobileMenuOpen(false)}>PARTNERS</NavLink>
-          <NavLink to="/#contact" mobile onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
+          <NavLink to="/contact" mobile onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
         </div>
       )}
     </nav>
