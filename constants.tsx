@@ -1,4 +1,3 @@
-
 import { Service, Stat, Partner, Testimonial } from './types';
 
 export interface HeroSlide {
@@ -376,11 +375,11 @@ export const STATS: Stat[] = [
 ];
 
 export const PARTNER_LOGOS: string[] = [
-  'Honeywell', 'Samsung', 'Bosch', 'Hikvision', 'Cisco', 'Schneider', 'Dell', 'HP', '3M', 'Axis', 'Pelco', 'HID', 'Dahua', 'CP Plus', 'Panasonic', 'Sony', 'LG', 'ZKTeco', 'Veritas', 'Commscope', 'Siemens', 'Nokia', 'Aruba', 'Fortinet'
+  'Honeywell', 'SYRIS', 'MORLEY IAS', 'SAMSUNG TECHWIN', 'PELCO', 'HEINRICH', 'COOPER', 'TRANE', 'HID', 'Rapiscan Systems', 'SAFRAN Morpho', 'HIKVISION', 'DETEX', 'Kidde', 'Schneider Electric', 'Magnetic Autocontrol', 'BlueBox', 'FAAC', 'EDWARDS', '3M', 'SYSTEM SENSOR', 'Secutron', 'AXIS COMMUNICATIONS', 'HOCHIKI', 'GARRETT', 'EINS', 'BOSCH', 'UV-GUARD', 'CISCO', 'hp', 'DELL', 'AMP NETCONNECT'
 ];
 
 export const CUSTOMER_LOGOS: string[] = [
-  'Ramada', 'AT&T', 'Daikin', 'Amazon', 'Tata AIG', 'Experion', 'Daikin', 'Ester'
+  'RAMADA', 'at&t', 'EXPERION', 'DAIKIN', 'ESTER INDUSTRIES LTD.', 'LI & FUNG LIMITED', 'TATA AIG INSURANCE', 'Fareportal', 'UP BHAVAN', 'OKS GROUP', 'GLC', 'SOM PRO FACILITIES', 'Noble System Control', 'ZARA OSSA', 'AMAZON VENDING SOLUTIONS', 'SPL', 'SHIV NADAR SCHOOL', 'NIFTEM', 'JSG', 'KRISHNA CONSTRUCTION'
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

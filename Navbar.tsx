@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
@@ -59,9 +58,9 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-10">
           <NavLink to="/">HOME</NavLink>
-          <NavLink to="/#about">ABOUT</NavLink>
+          <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/services">SERVICES</NavLink>
-          <NavLink to="/#partners">PARTNERS</NavLink>
+          <NavLink to="/partners">PARTNERS</NavLink>
           <NavLink to="/#contact">CONTACT</NavLink>
         </div>
 
@@ -79,9 +78,9 @@ export const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t p-6 shadow-xl flex flex-col gap-6 animate-in slide-in-from-top duration-300">
           <NavLink to="/" mobile onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
-          <NavLink to="/#about" mobile onClick={() => setIsMobileMenuOpen(false)}>ABOUT</NavLink>
+          <NavLink to="/about" mobile onClick={() => setIsMobileMenuOpen(false)}>ABOUT</NavLink>
           <NavLink to="/services" mobile onClick={() => setIsMobileMenuOpen(false)}>SERVICES</NavLink>
-          <NavLink to="/#partners" mobile onClick={() => setIsMobileMenuOpen(false)}>PARTNERS</NavLink>
+          <NavLink to="/partners" mobile onClick={() => setIsMobileMenuOpen(false)}>PARTNERS</NavLink>
           <NavLink to="/#contact" mobile onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
         </div>
       )}

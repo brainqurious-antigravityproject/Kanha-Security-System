@@ -1,11 +1,12 @@
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { HomePage } from './HomePage';
+import { AboutPage } from './AboutPage';
 import { ServicesPage } from './ServicesPage';
 import { ServiceDetailPage } from './ServiceDetailPage';
+import { PartnersPage } from './PartnersPage';
 
 export default function App() {
   return (
@@ -15,8 +16,10 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:id" element={<ServiceDetailPage />} />
+            <Route path="/partners" element={<PartnersPage />} />
           </Routes>
         </main>
         <Footer />
