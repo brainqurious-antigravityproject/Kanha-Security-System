@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 // Added missing Award and ShieldCheck imports
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Award, ShieldCheck } from 'lucide-react';
@@ -93,12 +92,18 @@ export const ContactPage = () => {
                 <p className="text-[#6B7280] font-inter">Complete the form below and an expert will contact you within 24 hours.</p>
               </div>
 
-              <form className="space-y-6 md:space-y-8" onSubmit={(e) => e.preventDefault()}>
+              <form 
+                action="https://formspree.io/f/xwvnqqzy"
+                method="POST"
+                className="space-y-6 md:space-y-8"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Full Name</label>
                     <input 
                       type="text" 
+                      name="Full Name"
+                      required
                       className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter" 
                       placeholder="Enter your name" 
                     />
@@ -107,6 +112,8 @@ export const ContactPage = () => {
                     <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Email Address</label>
                     <input 
                       type="email" 
+                      name="email"
+                      required
                       className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter" 
                       placeholder="email@company.com" 
                     />
@@ -114,7 +121,10 @@ export const ContactPage = () => {
                 </div>
                 <div className="space-y-2">
                   <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Inquiry Subject</label>
-                  <select className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter appearance-none cursor-pointer">
+                  <select 
+                    name="subject"
+                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter appearance-none cursor-pointer"
+                  >
                     <option>CCTV & Surveillance</option>
                     <option>Building Management (BMS)</option>
                     <option>Fire Protection Systems</option>
@@ -126,11 +136,16 @@ export const ContactPage = () => {
                   <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Project Message</label>
                   <textarea 
                     rows={5} 
+                    name="message"
+                    required
                     className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all resize-none font-inter" 
                     placeholder="Describe your security requirements in detail..."
                   ></textarea>
                 </div>
-                <button className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[15px] uppercase tracking-widest rounded-xl hover:bg-[#2F80ED] transition-all duration-300 font-montserrat shadow-xl flex items-center justify-center gap-3 group">
+                <button 
+                  type="submit"
+                  className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[15px] uppercase tracking-widest rounded-xl hover:bg-[#2F80ED] transition-all duration-300 font-montserrat shadow-xl flex items-center justify-center gap-3 group"
+                >
                   Send Inquiry <Send size={18} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>

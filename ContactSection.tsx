@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
@@ -57,15 +56,20 @@ export const ContactSection = () => (
         </div>
 
         <div className="bg-white p-8 md:p-12 rounded-[24px] shadow-xl border border-gray-100 relative overflow-hidden z-0">
-          {/* Decorative accent - Moved to back layer with -z-10 and adjusted opacity */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#2F80ED]/10 rounded-bl-full pointer-events-none -z-10 translate-x-12 -translate-y-12" />
           
-          <form className="space-y-6 md:space-y-8 relative z-10" onSubmit={(e) => e.preventDefault()}>
+          <form 
+            action="https://formspree.io/f/xwvnqqzy"
+            method="POST"
+            className="space-y-6 md:space-y-8 relative z-10"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Full Name</label>
                 <input 
                   type="text" 
+                  name="Full Name"
+                  required
                   className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#2F80ED]/20 focus:border-[#2F80ED] outline-none transition-all font-inter" 
                   placeholder="John Doe" 
                 />
@@ -74,6 +78,8 @@ export const ContactSection = () => (
                 <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Email Address</label>
                 <input 
                   type="email" 
+                  name="email"
+                  required
                   className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#2F80ED]/20 focus:border-[#2F80ED] outline-none transition-all font-inter" 
                   placeholder="john@example.com" 
                 />
@@ -83,11 +89,16 @@ export const ContactSection = () => (
               <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">How can we help?</label>
               <textarea 
                 rows={4} 
+                name="message"
+                required
                 className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#2F80ED]/20 focus:border-[#2F80ED] outline-none transition-all resize-none font-inter" 
                 placeholder="Tell us about your project requirements..."
               ></textarea>
             </div>
-            <button className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[16px] uppercase tracking-widest rounded-[8px] hover:bg-[#2F80ED] transition-all duration-300 font-montserrat shadow-lg transform active:scale-[0.98]">
+            <button 
+              type="submit"
+              className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[16px] uppercase tracking-widest rounded-[8px] hover:bg-[#2F80ED] transition-all duration-300 font-montserrat shadow-lg transform active:scale-[0.98]"
+            >
               Send Inquiry
             </button>
           </form>
