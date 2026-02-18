@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { TESTIMONIALS } from './constants';
@@ -68,38 +67,38 @@ export const TestimonialSection = () => {
             </div>
           </div>
 
-          {/* Right Column: Professional Testimonial Card */}
-          <div className="lg:col-span-7 relative">
+          {/* Right Column: Professional Testimonial Card (Slightly smaller) */}
+          <div className="lg:col-span-7 relative flex justify-center lg:justify-start">
             <div 
               key={currentIndex} 
-              className="bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] relative text-[#0B1F3A] animate-in fade-in slide-in-from-right-8 duration-500 border-t-4 border-[#2F80ED]"
+              className="bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] relative text-[#0B1F3A] animate-in fade-in slide-in-from-right-8 duration-500 border-t-4 border-[#2F80ED] max-w-2xl w-full"
             >
               {/* Refined Quote Watermark */}
-              <div className="absolute top-8 right-12 opacity-[0.04]">
-                <Quote size={120} strokeWidth={1} fill="currentColor" />
+              <div className="absolute top-6 right-8 opacity-[0.03]">
+                <Quote size={100} strokeWidth={1} fill="currentColor" />
               </div>
 
-              <div className="p-10 md:p-16 space-y-10">
+              <div className="p-8 md:p-12 space-y-8">
                 <div className="relative z-10">
-                  <Quote size={32} className="text-[#2F80ED] mb-6 opacity-40" fill="currentColor" />
-                  <p className="text-[20px] md:text-[24px] font-medium leading-[1.6] font-inter text-[#1F2937]">
+                  <Quote size={28} className="text-[#2F80ED] mb-4 opacity-40" fill="currentColor" />
+                  <p className="text-[18px] md:text-[20px] font-medium leading-[1.6] font-inter text-[#1F2937]">
                     {t.content}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-6 pt-10 border-t border-gray-100 relative z-10">
+                <div className="flex items-center gap-5 pt-8 border-t border-gray-100 relative z-10">
                   <div className="relative">
                     <img 
                       src={t.avatar} 
                       alt={t.name}
-                      className="w-20 h-20 object-cover rounded-2xl border-2 border-gray-50 shadow-sm"
+                      className="w-16 h-16 object-cover rounded-2xl border-2 border-gray-50 shadow-sm"
                     />
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="text-[20px] font-bold font-montserrat uppercase tracking-tight">
+                  <div className="space-y-0.5">
+                    <h4 className="text-[18px] font-bold font-montserrat uppercase tracking-tight">
                       {t.name}
                     </h4>
-                    <p className="text-[#2F80ED] font-bold text-[13px] uppercase tracking-[0.2em] font-inter">
+                    <p className="text-[#2F80ED] font-bold text-[12px] uppercase tracking-[0.2em] font-inter">
                       {t.role}
                     </p>
                   </div>
@@ -107,8 +106,8 @@ export const TestimonialSection = () => {
               </div>
             </div>
 
-            {/* Subtle background glow to add depth without clutter */}
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#2F80ED]/20 blur-[120px] opacity-30 rounded-full" />
+            {/* Subtle background glow */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#2F80ED]/20 blur-[100px] opacity-20 rounded-full" />
           </div>
         </div>
       </div>

@@ -27,9 +27,9 @@ export const ContactPage = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      value: "New Delhi, India",
+      value: "Chattarpur, New Delhi",
       desc: "E-155, Suman Colony, Chattarpur, Delhi - 110074",
-      action: "https://maps.google.com",
+      action: "https://maps.google.com/maps?q=28.495722,77.181028&hl=en&z=16",
       actionText: "Get directions"
     }
   ];
@@ -50,7 +50,8 @@ export const ContactPage = () => {
           <h1 className="text-[42px] md:text-[64px] font-bold text-white font-montserrat uppercase tracking-tight leading-tight">
             CONNECT WITH <span className="text-[#2F80ED]">OUR EXPERTS</span>
           </h1>
-          <p className="text-[18px] text-white/60 font-inter max-w-2xl mx-auto leading-relaxed">
+          {/* Increased font size from 18px to 20px */}
+          <p className="text-[20px] text-white/60 font-inter max-w-2xl mx-auto leading-relaxed">
             Have a project in mind? Our engineering team is ready to help you design and implement a world-class security ecosystem.
           </p>
         </div>
@@ -66,9 +67,12 @@ export const ContactPage = () => {
               </div>
               <h3 className="text-[20px] font-bold text-[#0B1F3A] font-montserrat uppercase mb-2">{method.title}</h3>
               <p className="text-[16px] font-bold text-[#2F80ED] font-inter mb-4">{method.value}</p>
-              <p className="text-sm text-[#6B7280] font-inter leading-relaxed mb-6">{method.desc}</p>
+              {/* Increased font size from text-sm (14px) to 16px */}
+              <p className="text-[16px] text-[#6B7280] font-inter leading-relaxed mb-6">{method.desc}</p>
               <a 
                 href={method.action} 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[13px] font-bold text-[#0B1F3A] uppercase tracking-widest font-montserrat flex items-center gap-2 hover:text-[#2F80ED] transition-colors"
               >
                 {method.actionText} <Clock size={14} className="opacity-40" />
@@ -89,7 +93,8 @@ export const ContactPage = () => {
             <div className="relative z-10 space-y-10">
               <div className="space-y-4">
                 <h2 className="text-[28px] md:text-[36px] font-bold text-[#0B1F3A] font-montserrat uppercase">Send an Inquiry</h2>
-                <p className="text-[#6B7280] font-inter">Complete the form below and an expert will contact you within 24 hours.</p>
+                {/* Increased font size from default 16px to 18px */}
+                <p className="text-[18px] text-[#6B7280] font-inter">Complete the form below and an expert will contact you within 24 hours.</p>
               </div>
 
               <form 
@@ -170,7 +175,8 @@ export const ContactPage = () => {
                     </div>
                     <div className="space-y-1">
                       <h4 className="font-bold text-[#0B1F3A] text-sm uppercase font-montserrat">{item.title}</h4>
-                      <p className="text-sm text-[#6B7280] font-inter leading-relaxed">{item.desc}</p>
+                      {/* Increased font size from text-sm (14px) to 16px */}
+                      <p className="text-[16px] text-[#6B7280] font-inter leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -181,12 +187,22 @@ export const ContactPage = () => {
               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
               <div className="relative z-10 space-y-4">
                 <h4 className="text-lg font-bold font-montserrat uppercase">Headquarters Location</h4>
-                <div className="flex items-start gap-4 text-white/70 font-inter text-sm">
+                {/* Increased font size from text-sm (14px) to 16px and removed coordinate text */}
+                <div className="flex items-start gap-4 text-white/70 font-inter text-[16px]">
                   <MapPin size={18} className="shrink-0 text-[#2F80ED]" />
-                  <p>E-155, Suman Colony, Chattarpur,<br />Delhi - 110074<br />(Near Baba Balaknathmandir)</p>
+                  <p>E-155, Suman Colony, Chattarpur,<br />Delhi - 110074</p>
                 </div>
-                <div className="aspect-video w-full rounded-xl overflow-hidden mt-6 bg-white/5 border border-white/10 flex items-center justify-center">
-                  <span className="text-white/20 text-xs font-bold uppercase tracking-widest">Map View Unavailable</span>
+                <div className="aspect-video w-full rounded-xl overflow-hidden mt-6 bg-white shadow-inner relative">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.492792163887!2d77.17690687613357!3d28.494817790320102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f1ea60729f7%3A0x63fad16d92fefc6b!2sKanha%20security%20system!5e0!3m2!1sen!2sin!4v1771438670525!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="KSS Headquarters Location"
+                  ></iframe>
                 </div>
               </div>
             </div>
