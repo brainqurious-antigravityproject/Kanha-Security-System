@@ -2,6 +2,7 @@
 import React from 'react';
 import { Hero } from './Hero';
 import { StatsSection } from './StatsSection';
+import { SolutionsHighlight } from './SolutionsHighlight';
 import { ServicesGrid } from './ServicesGrid';
 import { Integrations } from './Integrations';
 import { TestimonialSection } from './TestimonialSection';
@@ -12,6 +13,7 @@ export const HomePage = () => (
   <>
     <Hero />
     <StatsSection />
+    <SolutionsHighlight />
     <ServicesGrid />
     <Integrations />
     <TestimonialSection />
