@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 import { FAQS } from './constants';
 
@@ -53,7 +54,7 @@ export const FAQSection = () => {
                 <div>
                   <h4 className="font-bold text-[#0B1F3A] text-[15px] mb-1 font-montserrat">Still have questions?</h4>
                   <p className="text-[13px] text-[#6B7280] mb-3 font-inter">Our experts are here to help you design your perfect system.</p>
-                  <a href="#contact" className="text-[#2F80ED] font-bold text-[13px] uppercase tracking-wider hover:underline font-inter">Get in touch →</a>
+                  <Link to="/contact" className="text-[#2F80ED] font-bold text-[13px] uppercase tracking-wider hover:underline font-inter">Get in touch →</Link>
                 </div>
               </div>
             </div>

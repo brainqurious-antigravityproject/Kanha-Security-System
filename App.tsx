@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { HomePage } from './HomePage';
@@ -22,6 +23,8 @@ export default function App() {
             <Route path="/service/:id" element={<ServiceDetailPage />} />
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            {/* Catch-all route to prevent white screen on invalid paths */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />

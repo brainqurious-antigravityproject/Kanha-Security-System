@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { SERVICES } from './constants';
 import { ServiceCard } from './ServiceCard';
 
@@ -51,9 +52,9 @@ export const ServicesPage = () => {
               Our engineering team is ready to design a custom solution tailored to your facility's unique requirements.
             </p>
             <div className="pt-4">
-              <a href="/#contact" className="inline-block bg-white text-[#2F80ED] px-12 py-5 rounded-[8px] font-bold text-[16px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-xl font-montserrat">
+              <Link to="/contact" className="inline-block bg-white text-[#2F80ED] px-12 py-5 rounded-[8px] font-bold text-[16px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-xl font-montserrat">
                 Get a Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
+
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { PARTNER_LOGOS, CUSTOMER_LOGOS } from './constants';
 import { ShieldCheck, Award, Handshake, Users } from 'lucide-react';
 
@@ -104,9 +106,9 @@ export const PartnersPage = () => {
             Join our ecosystem of safety excellence. Whether you are an OEM or an enterprise seeking robust solutions, KSS is your trusted engineering partner.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/#contact" className="bg-[#0B1F3A] text-white px-10 py-5 rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-[#2F80ED] transition-all shadow-lg font-montserrat">
+            <Link to="/contact" className="bg-[#0B1F3A] text-white px-10 py-5 rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-[#2F80ED] transition-all shadow-lg font-montserrat">
               Get A Consultation
-            </a>
+            </Link>
             <a href="tel:+919810021487" className="bg-white text-[#0B1F3A] border-2 border-[#0B1F3A] px-10 py-5 rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-[#0B1F3A] hover:text-white transition-all font-montserrat">
               Call Our Experts
             </a>
