@@ -25,7 +25,7 @@ export const Hero = () => {
           className="absolute inset-0 bg-cover bg-center transition-all duration-1000 opacity-30"
           style={{ backgroundImage: `url(${currentSlide.imageUrl})` }}
         />
-        <div className="absolute inset-0 bg-[#0B1F3A]/80" />
+        <div className="absolute inset-0 bg-[#0B1F3A]/20" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center pb-24">
