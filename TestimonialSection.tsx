@@ -27,8 +27,8 @@ export const TestimonialSection = () => {
           <div className="lg:col-span-5 space-y-12">
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <span className="w-8 h-[2px] bg-[#2F80ED]"></span>
-                <span className="text-[12px] font-bold text-[#2F80ED] uppercase tracking-[0.4em] font-inter">
+                <span className="w-8 h-[2px] bg-[#257995]"></span>
+                <span className="text-[12px] font-bold text-[#257995] uppercase tracking-[0.4em] font-inter">
                   Executive Endorsements
                 </span>
               </div>
@@ -43,7 +43,7 @@ export const TestimonialSection = () => {
 
             <div className="flex items-center gap-8">
               <div className="flex flex-col font-montserrat">
-                <span className="text-sm font-bold text-[#2F80ED] uppercase tracking-widest mb-1">Index</span>
+                <span className="text-sm font-bold text-[#257995] uppercase tracking-widest mb-1">Index</span>
                 <div className="flex items-baseline gap-1">
                   <span className="text-3xl font-bold">{(currentIndex + 1).toString().padStart(2, '0')}</span>
                   <span className="text-lg text-white/20">/ {TESTIMONIALS.length.toString().padStart(2, '0')}</span>
@@ -71,7 +71,7 @@ export const TestimonialSection = () => {
           <div className="lg:col-span-7 relative flex justify-center lg:justify-start">
             <div 
               key={currentIndex} 
-              className="bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] relative text-[#0B1F3A] animate-in fade-in slide-in-from-right-8 duration-500 border-t-4 border-[#2F80ED] max-w-2xl w-full"
+              className="bg-white rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] relative text-[#0B1F3A] animate-in fade-in slide-in-from-right-8 duration-500 border-t-4 border-[#257995] max-w-2xl w-full"
             >
               {/* Refined Quote Watermark */}
               <div className="absolute top-6 right-8 opacity-[0.03]">
@@ -80,7 +80,7 @@ export const TestimonialSection = () => {
 
               <div className="p-8 md:p-12 space-y-8">
                 <div className="relative z-10">
-                  <Quote size={28} className="text-[#2F80ED] mb-4 opacity-40" fill="currentColor" />
+                  <Quote size={28} className="text-[#257995] mb-4 opacity-40" fill="currentColor" />
                   <p className="text-[18px] md:text-[20px] font-medium leading-[1.6] font-inter text-[#1F2937]">
                     {t.content}
                   </p>
@@ -98,7 +98,7 @@ export const TestimonialSection = () => {
                     <h4 className="text-[18px] font-bold font-montserrat uppercase tracking-tight">
                       {t.name}
                     </h4>
-                    <p className="text-[#2F80ED] font-bold text-[12px] uppercase tracking-[0.2em] font-inter">
+                    <p className="text-[#257995] font-bold text-[12px] uppercase tracking-[0.2em] font-inter">
                       {t.role}
                     </p>
                   </div>
@@ -107,7 +107,7 @@ export const TestimonialSection = () => {
             </div>
 
             {/* Subtle background glow */}
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#2F80ED]/20 blur-[100px] opacity-20 rounded-full" />
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#257995]/20 blur-[100px] opacity-20 rounded-full" />
           </div>
         </div>
       </div>

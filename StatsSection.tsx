@@ -58,7 +58,7 @@ export const StatsSection = () => {
         <div className="w-screen relative left-1/2 -ml-[50vw] overflow-hidden py-4">
           <div className="animate-marquee-rtl flex gap-6 md:gap-10 items-center">
             {[...PARTNER_LOGOS, ...PARTNER_LOGOS, ...PARTNER_LOGOS].map((name, i) => (
-              <div key={i} className="px-6 py-2 md:px-10 md:py-4 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center min-w-max hover:border-[#2F80ED] transition-colors cursor-default">
+              <div key={i} className="px-6 py-2 md:px-10 md:py-4 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center min-w-max hover:border-[#257995] transition-colors cursor-default">
                 <span className="text-[12px] md:text-[16px] font-bold text-[#0B1F3A] uppercase tracking-wider font-montserrat">
                   {name}
                 </span>
@@ -71,11 +71,11 @@ export const StatsSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {STATS.filter(s => s.label !== 'Integrations').map((stat, i) => (
-            <div key={i} className="bg-white p-6 md:p-10 rounded-[16px] shadow-sm border border-gray-100 text-center space-y-2 md:space-y-4 hover:border-[#2F80ED] transition-all hover:shadow-md">
+            <div key={i} className="bg-white p-6 md:p-10 rounded-[16px] shadow-sm border border-gray-100 text-center space-y-2 md:space-y-4 hover:border-[#257995] transition-all hover:shadow-md">
               <div className="text-[32px] md:text-[48px] lg:text-[56px] font-bold text-[#0B1F3A] font-montserrat leading-none">
                 <CountingNumber value={stat.value} />
               </div>
-              <h3 className="text-[12px] md:text-[16px] font-bold text-[#2F80ED] uppercase tracking-wider font-montserrat">{stat.label}</h3>
+              <h3 className="text-[12px] md:text-[16px] font-bold text-[#257995] uppercase tracking-wider font-montserrat">{stat.label}</h3>
               <p className="text-[13px] md:text-[15px] text-[#6B7280] leading-snug font-inter">{stat.subLabel}</p>
             </div>
           ))}

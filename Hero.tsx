@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { HERO_SLIDES } from './constants';
 
 export const Hero = () => {
@@ -28,27 +29,36 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-[#0B1F3A]/20" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto mt-20 px-6 w-full flex flex-col items-center text-center pb-24">
         <div className="max-w-5xl space-y-8">
           <div className="flex justify-center">
-            <span className="text-[#2F80ED] text-[11px] md:text-[16px] font-bold tracking-[0.3em] uppercase font-inter border-2 border-dotted border-[#2F80ED]/40 px-6 py-2 rounded-full whitespace-nowrap animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <span className="text-[#257995] text-[11px] md:text-[16px] font-bold tracking-[0.3em] uppercase font-inter border-2 border-dotted border-[#257995]/40 px-6 py-2 rounded-full whitespace-nowrap animate-in fade-in slide-in-from-bottom-4 duration-700">
               {currentSlide.tagline}
             </span>
           </div>
           
           <h1 className="text-[40px] md:text-6xl lg:text-[84px] leading-[1.1] font-bold text-white font-montserrat uppercase tracking-tight animate-in fade-in slide-in-from-bottom-6 duration-1000">
             {currentSlide.title} <br className="hidden md:block" />
-            <span className="text-[#2F80ED]">{currentSlide.highlight}</span>
+            <span className="text-[#257995]">{currentSlide.highlight}</span>
           </h1>
           
           <p className="text-[16px] md:text-[20px] text-white/80 leading-relaxed font-inter max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
             {currentSlide.description}
           </p>
 
-          <div className="pt-10 flex justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000">
-            <button className="bg-[#2F80ED] text-white px-12 py-5 rounded-[6px] text-[15px] font-bold uppercase tracking-widest font-montserrat hover:brightness-110 transition-all shadow-xl hover:scale-105 active:scale-95">
-              Get Started
-            </button>
+          <div className="pt-10 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000">
+            <Link 
+              to="/contact"
+              className="bg-[#257995] text-white px-10 py-4 rounded-[6px] text-[15px] font-bold uppercase tracking-widest font-montserrat hover:brightness-110 transition-all shadow-xl hover:scale-105 active:scale-95"
+            >
+              Contact us
+            </Link>
+            <a 
+              href="tel:+919810021487"
+              className="bg-white text-[#0B1F3A] px-10 py-4 rounded-[6px] text-[15px] font-bold uppercase tracking-widest font-montserrat hover:bg-gray-100 transition-all shadow-xl hover:scale-105 active:scale-95 border border-gray-200"
+            >
+              Free Consultant
+            </a>
           </div>
         </div>
 

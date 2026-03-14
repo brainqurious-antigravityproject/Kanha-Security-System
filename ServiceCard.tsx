@@ -21,7 +21,7 @@ export const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         {/* Icon Badge */}
-        <div className="absolute bottom-4 left-4 bg-[#2F80ED] p-2.5 rounded-xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div className="absolute bottom-4 left-4 bg-[#257995] p-2.5 rounded-xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
           <IconComponent size={20} />
         </div>
       </div>
@@ -39,7 +39,7 @@ export const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
         <ul className="space-y-2 mb-6 flex-grow">
           {service.features.slice(0, 3).map((feature, i) => (
             <li key={i} className="flex items-start gap-2 text-[14px] font-medium text-[#1F2937] font-inter">
-              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#2F80ED] shrink-0" />
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#257995] shrink-0" />
               <span className="line-clamp-1">{feature}</span>
             </li>
           ))}
@@ -47,7 +47,7 @@ export const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
 
         <Link 
           to={`/service/${service.id}`}
-          className="inline-flex items-center gap-2 text-[14px] font-bold text-[#2F80ED] hover:gap-3 transition-all font-inter mt-auto"
+          className="inline-flex items-center gap-2 text-[14px] font-bold text-[#257995] hover:gap-3 transition-all font-inter mt-auto"
         >
           Learn More <ArrowRight size={16} />
         </Link>

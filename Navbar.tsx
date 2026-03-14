@@ -27,7 +27,7 @@ export const Navbar = () => {
     };
 
     const linkClasses = `text-[14px] font-semibold tracking-wide transition-colors ${
-      mobile ? 'text-[#0B1F3A] hover:text-[#2F80ED]' : (isScrolled ? 'text-[#0B1F3A] hover:text-[#2F80ED]' : 'text-white hover:text-[#2F80ED]')
+      mobile ? 'text-[#0B1F3A] hover:text-[#257995]' : (isScrolled ? 'text-[#0B1F3A] hover:text-[#257995]' : 'text-white hover:text-[#257995]')
     }`;
 
     // If it's a regular route (not an anchor on the current page)
@@ -50,7 +50,7 @@ export const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 md:py-6 ${navbarBg}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#2F80ED] rounded-[6px] flex items-center justify-center font-bold text-white text-xl">
+          <div className="w-10 h-10 bg-[#257995] rounded-[6px] flex items-center justify-center font-bold text-white text-xl">
             K
           </div>
           <span className={`text-2xl font-bold font-montserrat uppercase tracking-tight ${textColor}`}>KSS</span>
@@ -65,9 +65,9 @@ export const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="tel:+919810021487" className="flex items-center gap-2 bg-[#2F80ED] text-white px-5 py-2.5 rounded-[6px] hover:brightness-110 transition-all font-bold text-[14px] shadow-sm">
+          <a href="tel:+919810021487" className="flex items-center gap-2 bg-[#257995] text-white px-5 py-2.5 rounded-[6px] hover:brightness-110 transition-all font-bold text-[14px] shadow-sm">
             <Phone size={16} />
-            <span className="hidden lg:inline">+919810021487</span>
+            <span className="hidden lg:inline">Book Call</span>
           </a>
           <button className={`${textColor} md:hidden`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

@@ -14,16 +14,16 @@ export const ServicesPage = () => {
       {/* Header Section */}
       <div className="pt-40 pb-20 bg-[#0B1F3A] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
-             style={{ backgroundImage: 'radial-gradient(#2F80ED 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+             style={{ backgroundImage: 'radial-gradient(#257995 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-6">
           <div className="flex justify-center items-center gap-3">
-            <span className="w-10 h-[2px] bg-[#2F80ED]"></span>
-            <span className="text-[14px] font-bold text-[#2F80ED] uppercase tracking-widest font-inter">Full Portfolio</span>
-            <span className="w-10 h-[2px] bg-[#2F80ED]"></span>
+            <span className="w-10 h-[2px] bg-[#257995]"></span>
+            <span className="text-[14px] font-bold text-[#257995] uppercase tracking-widest font-inter">Full Portfolio</span>
+            <span className="w-10 h-[2px] bg-[#257995]"></span>
           </div>
           <h1 className="text-[42px] md:text-[64px] font-bold text-white font-montserrat uppercase tracking-tight leading-tight">
-            OUR <span className="text-[#2F80ED]">SECURITY</span> SOLUTIONS
+            OUR <span className="text-[#257995]">SECURITY</span> SOLUTIONS
           </h1>
           <p className="text-[18px] text-white/60 font-inter max-w-2xl mx-auto">
             From physical perimeter protection to advanced digital integration, we offer 15 comprehensive safety ecosystems for any scale of operation.
@@ -42,7 +42,7 @@ export const ServicesPage = () => {
 
       {/* CTA Section */}
       <div className="pb-32 max-w-7xl mx-auto px-6">
-        <div className="bg-[#2F80ED] rounded-[24px] p-12 text-center text-white shadow-2xl relative overflow-hidden">
+        <div className="bg-[#257995] rounded-[24px] p-12 text-center text-white shadow-2xl relative overflow-hidden">
           <div className="absolute -top-10 -right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-black/10 rounded-full blur-3xl" />
           
@@ -52,7 +52,7 @@ export const ServicesPage = () => {
               Our engineering team is ready to design a custom solution tailored to your facility's unique requirements.
             </p>
             <div className="pt-4">
-              <Link to="/contact" className="inline-block bg-white text-[#2F80ED] px-12 py-5 rounded-[8px] font-bold text-[16px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-xl font-montserrat">
+              <Link to="/contact" className="inline-block bg-white text-[#257995] px-12 py-5 rounded-[8px] font-bold text-[16px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-xl font-montserrat">
                 Get a Quote
               </Link>
             </div>

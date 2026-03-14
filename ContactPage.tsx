@@ -19,9 +19,9 @@ export const ContactPage = () => {
     {
       icon: Mail,
       title: "Email Us",
-      value: "info.kssystem19@gmail.com",
+      value: "sales@kanhasecurity.in",
       desc: "Our support team is online 24/7.",
-      action: "mailto:info.kssystem19@gmail.com",
+      action: "mailto:sales@kanhasecurity.in",
       actionText: "Send email"
     },
     {
@@ -39,16 +39,16 @@ export const ContactPage = () => {
       {/* Hero Section */}
       <section className="pt-40 pb-24 bg-[#0B1F3A] relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
-             style={{ backgroundImage: 'radial-gradient(#2F80ED 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
+             style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-8">
           <div className="flex justify-center">
-            <span className="text-[#2F80ED] text-[12px] font-bold tracking-[0.4em] uppercase font-inter border border-[#2F80ED]/30 px-6 py-2 rounded-full">
+            <span className="text-[#257995] text-[12px] font-bold tracking-[0.4em] uppercase font-inter border border-[#257995]/30 px-6 py-2 rounded-full">
               Get In Touch
             </span>
           </div>
           <h1 className="text-[42px] md:text-[64px] font-bold text-white font-montserrat uppercase tracking-tight leading-tight">
-            CONNECT WITH <span className="text-[#2F80ED]">OUR EXPERTS</span>
+            CONNECT WITH <span className="text-[#257995]">OUR EXPERTS</span>
           </h1>
           {/* Increased font size from 18px to 20px */}
           <p className="text-[20px] text-white/60 font-inter max-w-2xl mx-auto leading-relaxed">
@@ -61,19 +61,19 @@ export const ContactPage = () => {
       <section className="py-12 mt-2 max-w-7xl mx-auto px-6 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {contactMethods.map((method, idx) => (
-            <div key={idx} className="bg-white p-10 rounded-2xl shadow-xl border border-gray-50 flex flex-col items-center text-center group hover:border-[#2F80ED]/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#F5F7FA] text-[#2F80ED] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#2F80ED] group-hover:text-white transition-all duration-300 shadow-sm">
+            <div key={idx} className="bg-white p-10 rounded-2xl shadow-xl border border-gray-50 flex flex-col items-center text-center group hover:border-[#257995]/30 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#F5F7FA] text-[#257995] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#257995] group-hover:text-white transition-all duration-300 shadow-sm">
                 <method.icon size={28} />
               </div>
               <h3 className="text-[20px] font-bold text-[#0B1F3A] font-montserrat uppercase mb-2">{method.title}</h3>
-              <p className="text-[16px] font-bold text-[#2F80ED] font-inter mb-4">{method.value}</p>
+              <p className="text-[16px] font-bold text-[#257995] font-inter mb-4">{method.value}</p>
               {/* Increased font size from text-sm (14px) to 16px */}
               <p className="text-[16px] text-[#6B7280] font-inter leading-relaxed mb-6">{method.desc}</p>
               <a 
                 href={method.action} 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13px] font-bold text-[#0B1F3A] uppercase tracking-widest font-montserrat flex items-center gap-2 hover:text-[#2F80ED] transition-colors"
+                className="text-[13px] font-bold text-[#0B1F3A] uppercase tracking-widest font-montserrat flex items-center gap-2 hover:text-[#257995] transition-colors"
               >
                 {method.actionText} <Clock size={14} className="opacity-40" />
               </a>
@@ -88,7 +88,7 @@ export const ContactPage = () => {
           
           {/* Left Side: Form */}
           <div className="lg:col-span-7 bg-white p-8 md:p-16 rounded-[32px] shadow-2xl border border-gray-50 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#2F80ED]/5 rounded-bl-full pointer-events-none" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#257995]/5 rounded-bl-full pointer-events-none" />
             
             <div className="relative z-10 space-y-10">
               <div className="space-y-4">
@@ -98,7 +98,7 @@ export const ContactPage = () => {
               </div>
 
               <form 
-                action="https://formspree.io/f/xwvnqqzy"
+                action="https://formspree.io/f/sales@kanhasecurity.in"
                 method="POST"
                 className="space-y-6 md:space-y-8"
               >
@@ -109,7 +109,7 @@ export const ContactPage = () => {
                       type="text" 
                       name="Full Name"
                       required
-                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter" 
+                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter" 
                       placeholder="Enter your name" 
                     />
                   </div>
@@ -119,7 +119,7 @@ export const ContactPage = () => {
                       type="email" 
                       name="email"
                       required
-                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter" 
+                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter" 
                       placeholder="email@company.com" 
                     />
                   </div>
@@ -128,7 +128,7 @@ export const ContactPage = () => {
                   <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Inquiry Subject</label>
                   <select 
                     name="subject"
-                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all font-inter appearance-none cursor-pointer"
+                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter appearance-none cursor-pointer"
                   >
                     <option>CCTV & Surveillance</option>
                     <option>Building Management (BMS)</option>
@@ -143,13 +143,13 @@ export const ContactPage = () => {
                     rows={5} 
                     name="message"
                     required
-                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 focus:border-[#2F80ED] outline-none transition-all resize-none font-inter" 
+                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all resize-none font-inter" 
                     placeholder="Describe your security requirements in detail..."
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
-                  className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[15px] uppercase tracking-widest rounded-xl hover:bg-[#2F80ED] transition-all duration-300 font-montserrat shadow-xl flex items-center justify-center gap-3 group"
+                  className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[15px] uppercase tracking-widest rounded-xl hover:bg-[#257995] transition-all duration-300 font-montserrat shadow-xl flex items-center justify-center gap-3 group"
                 >
                   Send Inquiry <Send size={18} className="group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -160,7 +160,7 @@ export const ContactPage = () => {
           {/* Right Side: Additional Info */}
           <div className="lg:col-span-5 space-y-12">
             <div className="space-y-8">
-              <h3 className="text-[24px] font-bold text-[#0B1F3A] font-montserrat uppercase border-l-4 border-[#2F80ED] pl-6">
+              <h3 className="text-[24px] font-bold text-[#0B1F3A] font-montserrat uppercase border-l-4 border-[#257995] pl-6">
                 Why Work With Us?
               </h3>
               <div className="space-y-6">
@@ -170,7 +170,7 @@ export const ContactPage = () => {
                   { icon: ShieldCheck, title: "Secure Deployment", desc: "We ensure all networking and IP equipment is hardened against vulnerabilities." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5">
-                    <div className="shrink-0 w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-[#2F80ED] border border-gray-100">
+                    <div className="shrink-0 w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-[#257995] border border-gray-100">
                       <item.icon size={20} />
                     </div>
                     <div className="space-y-1">
@@ -189,7 +189,7 @@ export const ContactPage = () => {
                 <h4 className="text-lg font-bold font-montserrat uppercase">Headquarters Location</h4>
                 {/* Increased font size from text-sm (14px) to 16px and removed coordinate text */}
                 <div className="flex items-start gap-4 text-white/70 font-inter text-[16px]">
-                  <MapPin size={18} className="shrink-0 text-[#2F80ED]" />
+                  <MapPin size={18} className="shrink-0 text-[#257995]" />
                   <p>E-155, Suman Colony, Chattarpur,<br />Delhi - 110074</p>
                 </div>
                 <div className="aspect-video w-full rounded-xl overflow-hidden mt-6 bg-white shadow-inner relative">

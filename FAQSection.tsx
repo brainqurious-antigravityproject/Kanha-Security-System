@@ -10,10 +10,10 @@ const FAQItem: React.FC<{ item: any; isOpen: boolean; toggle: () => void }> = ({
       onClick={toggle}
       className="w-full py-6 flex items-center justify-between text-left group transition-all"
     >
-      <span className={`text-[17px] md:text-[19px] font-bold font-montserrat transition-colors ${isOpen ? 'text-[#2F80ED]' : 'text-[#0B1F3A] group-hover:text-[#2F80ED]'}`}>
+      <span className={`text-[17px] md:text-[19px] font-bold font-montserrat transition-colors ${isOpen ? 'text-[#257995]' : 'text-[#0B1F3A] group-hover:text-[#257995]'}`}>
         {item.question}
       </span>
-      <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#2F80ED] text-white rotate-180' : 'bg-gray-100 text-[#0B1F3A]'}`}>
+      <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#257995] text-white rotate-180' : 'bg-gray-100 text-[#0B1F3A]'}`}>
         {isOpen ? <Minus size={18} /> : <Plus size={18} />}
       </div>
     </button>
@@ -36,25 +36,25 @@ export const FAQSection = () => {
           {/* Left Side: Header */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
-              <span className="w-10 h-[2px] bg-[#2F80ED]"></span>
-              <span className="text-[14px] font-bold text-[#2F80ED] uppercase tracking-widest font-inter">Information Hub</span>
+              <span className="w-10 h-[2px] bg-[#257995]"></span>
+              <span className="text-[14px] font-bold text-[#257995] uppercase tracking-widest font-inter">Information Hub</span>
             </div>
             <h2 className="text-[32px] md:text-[42px] font-bold text-[#0B1F3A] font-montserrat uppercase leading-tight tracking-tight">
               FREQUENTLY <br />
-              <span className="text-[#2F80ED]">ASKED</span> QUESTIONS
+              <span className="text-[#257995]">ASKED</span> QUESTIONS
             </h2>
             <p className="text-[16px] text-[#6B7280] font-inter max-w-sm">
               Finding the right security solution can be complex. Here are answers to some of our most common inquiries.
             </p>
             <div className="pt-8">
               <div className="bg-[#F5F7FA] p-6 rounded-[12px] flex items-start gap-4 border border-gray-100">
-                <div className="w-10 h-10 bg-[#2F80ED] text-white rounded-full flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 bg-[#257995] text-white rounded-full flex items-center justify-center shrink-0">
                   <HelpCircle size={20} />
                 </div>
                 <div>
                   <h4 className="font-bold text-[#0B1F3A] text-[15px] mb-1 font-montserrat">Still have questions?</h4>
                   <p className="text-[13px] text-[#6B7280] mb-3 font-inter">Our experts are here to help you design your perfect system.</p>
-                  <Link to="/contact" className="text-[#2F80ED] font-bold text-[13px] uppercase tracking-wider hover:underline font-inter">Get in touch →</Link>
+                  <Link to="/contact" className="text-[#257995] font-bold text-[13px] uppercase tracking-wider hover:underline font-inter">Get in touch →</Link>
                 </div>
               </div>
             </div>
