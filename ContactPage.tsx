@@ -98,7 +98,7 @@ export const ContactPage = () => {
               </div>
 
               <form 
-                action="https://formspree.io/f/sales@kanhasecurity.in"
+                action="https://formsubmit.co/sales@kanhasecurity.in"
                 method="POST"
                 className="space-y-6 md:space-y-8"
               >

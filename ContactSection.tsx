@@ -59,7 +59,7 @@ export const ContactSection = () => (
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#257995]/10 rounded-bl-full pointer-events-none -z-10 translate-x-12 -translate-y-12" />
           
           <form 
-            action="https://formspree.io/f/sales@kanhasecurity.in"
+            action="https://formsubmit.co/sales@kanhasecurity.in"
             method="POST"
             className="space-y-6 md:space-y-8 relative z-10"
           >
