@@ -1,11 +1,41 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // Added missing Award and ShieldCheck imports
-import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Award, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Award, ShieldCheck, CheckCircle2, Loader2 } from 'lucide-react';
 
 export const ContactPage = () => {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/sales@kanhasecurity.in", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
 
   const contactMethods = [
     {
@@ -97,63 +127,97 @@ export const ContactPage = () => {
                 <p className="text-[18px] text-[#6B7280] font-inter">Complete the form below and an expert will contact you within 24 hours.</p>
               </div>
 
-              <form 
-                action="https://formsubmit.co/sales@kanhasecurity.in"
-                method="POST"
-                className="space-y-6 md:space-y-8"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Full Name</label>
-                    <input 
-                      type="text" 
-                      name="Full Name"
-                      required
-                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter" 
-                      placeholder="Enter your name" 
-                    />
+              {status === 'success' ? (
+                <div className="py-12 flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-500">
+                  <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                    <CheckCircle2 size={48} />
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Email Address</label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      required
-                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter" 
-                      placeholder="email@company.com" 
-                    />
+                  <div className="space-y-3">
+                    <h3 className="text-3xl font-bold text-[#0B1F3A] font-montserrat uppercase">Inquiry Received</h3>
+                    <p className="text-[18px] text-[#6B7280] font-inter max-w-md mx-auto">
+                      Thank you for contacting us. One of our security consultants will reach out to you shortly.
+                    </p>
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Inquiry Subject</label>
-                  <select 
-                    name="subject"
-                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter appearance-none cursor-pointer"
+                  <button 
+                    onClick={() => setStatus('idle')}
+                    className="bg-[#0B1F3A] text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#257995] transition-all"
                   >
-                    <option>CCTV & Surveillance</option>
-                    <option>Building Management (BMS)</option>
-                    <option>Fire Protection Systems</option>
-                    <option>Access Control & Biometrics</option>
-                    <option>Other / General Inquiry</option>
-                  </select>
+                    Send Another Inquiry
+                  </button>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Project Message</label>
-                  <textarea 
-                    rows={5} 
-                    name="message"
-                    required
-                    className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all resize-none font-inter" 
-                    placeholder="Describe your security requirements in detail..."
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit"
-                  className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[15px] uppercase tracking-widest rounded-xl hover:bg-[#257995] transition-all duration-300 font-montserrat shadow-xl flex items-center justify-center gap-3 group"
+              ) : (
+                <form 
+                  onSubmit={handleSubmit}
+                  className="space-y-6 md:space-y-8"
                 >
-                  Send Inquiry <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-              </form>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Full Name</label>
+                      <input 
+                        type="text" 
+                        name="name"
+                        required
+                        className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter" 
+                        placeholder="Enter your name" 
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Email Address</label>
+                      <input 
+                        type="email" 
+                        name="email"
+                        required
+                        className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter" 
+                        placeholder="email@company.com" 
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Inquiry Subject</label>
+                    <select 
+                      name="subject"
+                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter appearance-none cursor-pointer"
+                    >
+                      <option>CCTV & Surveillance</option>
+                      <option>Building Management (BMS)</option>
+                      <option>Fire Protection Systems</option>
+                      <option>Access Control & Biometrics</option>
+                      <option>Other / General Inquiry</option>
+                    </select>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[12px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Project Message</label>
+                    <textarea 
+                      rows={5} 
+                      name="message"
+                      required
+                      className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all resize-none font-inter" 
+                      placeholder="Describe your security requirements in detail..."
+                    ></textarea>
+                  </div>
+                  {status === 'error' && (
+                    <p className="text-red-500 text-sm font-medium animate-in fade-in slide-in-from-top-2">
+                      There was an error sending your message. Please try again.
+                    </p>
+                  )}
+                  <button 
+                    type="submit"
+                    disabled={status === 'loading'}
+                    className="w-full py-5 bg-[#0B1F3A] text-white font-bold text-[15px] uppercase tracking-widest rounded-xl hover:bg-[#257995] transition-all duration-300 font-montserrat shadow-xl flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {status === 'loading' ? (
+                      <>
+                        <Loader2 className="animate-spin" size={20} />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Inquiry <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
 
@@ -213,3 +277,4 @@ export const ContactPage = () => {
     </div>
   );
 };
+
