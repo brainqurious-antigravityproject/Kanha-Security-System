@@ -135,6 +135,30 @@ export const ContactSection = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
+                  <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Inquiry Subject</label>
+                  <select 
+                    name="subject"
+                    className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#257995]/20 focus:border-[#257995] outline-none transition-all font-inter appearance-none cursor-pointer"
+                  >
+                    <option>Building Management System (BMS)</option>
+                    <option>Integrated Security Management System (ISMS)</option>
+                    <option>Access Control System</option>
+                    <option>CCTV System (IP & Analogue)</option>
+                    <option>Fire Alarm System</option>
+                    <option>Fire Suppression System</option>
+                    <option>Perimeter Protection System</option>
+                    <option>Public Address & Voice Evacuation (PA / PAVA)</option>
+                    <option>Audio-Visual & Lighting Control System</option>
+                    <option>Data & Voice Networking Solutions</option>
+                    <option>Datacentre Protection & VESDA</option>
+                    <option>Contraband Detection Solutions</option>
+                    <option>Gate Automation & Barriers</option>
+                    <option>Emergency Lighting & Fire Hydrant Systems</option>
+                    <option>Rodent Repellent & Water Leak Detection Systems</option>
+                    <option>Other / General Inquiry</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
                   <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">How can we help?</label>
                   <textarea 
                     rows={4} 

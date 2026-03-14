@@ -178,10 +178,21 @@ export const ContactPage = () => {
                       name="subject"
                       className="w-full bg-[#F5F7FA] border-2 border-transparent rounded-xl p-4 text-[#0B1F3A] focus:bg-white focus:ring-4 focus:ring-[#257995]/10 focus:border-[#257995] outline-none transition-all font-inter appearance-none cursor-pointer"
                     >
-                      <option>CCTV & Surveillance</option>
-                      <option>Building Management (BMS)</option>
-                      <option>Fire Protection Systems</option>
-                      <option>Access Control & Biometrics</option>
+                      <option>Building Management System (BMS)</option>
+                      <option>Integrated Security Management System (ISMS)</option>
+                      <option>Access Control System</option>
+                      <option>CCTV System (IP & Analogue)</option>
+                      <option>Fire Alarm System</option>
+                      <option>Fire Suppression System</option>
+                      <option>Perimeter Protection System</option>
+                      <option>Public Address & Voice Evacuation (PA / PAVA)</option>
+                      <option>Audio-Visual & Lighting Control System</option>
+                      <option>Data & Voice Networking Solutions</option>
+                      <option>Datacentre Protection & VESDA</option>
+                      <option>Contraband Detection Solutions</option>
+                      <option>Gate Automation & Barriers</option>
+                      <option>Emergency Lighting & Fire Hydrant Systems</option>
+                      <option>Rodent Repellent & Water Leak Detection Systems</option>
                       <option>Other / General Inquiry</option>
                     </select>
                   </div>
