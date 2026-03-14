@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
-import { FAQS } from './constants';
+import { FAQS } from '../../constants/constants';
 
 const FAQItem: React.FC<{ item: any; isOpen: boolean; toggle: () => void }> = ({ item, isOpen, toggle }) => (
   <div className="border-b border-gray-100 last:border-0">

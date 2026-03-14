@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { PARTNER_LOGOS, CUSTOMER_LOGOS } from './constants';
+import { PARTNER_LOGOS, CUSTOMER_LOGOS } from '../constants/constants';
 import { ShieldCheck, Award, Handshake, Users } from 'lucide-react';
 
 export const PartnersPage = () => {

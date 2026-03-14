@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import { TESTIMONIALS } from './constants';
+import { TESTIMONIALS } from '../../constants/constants';
 
 export const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

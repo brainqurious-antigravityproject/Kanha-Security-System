@@ -4,7 +4,7 @@ import {
   ArrowLeft, CheckCircle, ChevronRight, Plus, Minus,
   Building, Shield, Lock, Camera, Flame, Fence, Video, Network, Megaphone, Search, Car, Database, Lightbulb, Zap, Droplets 
 } from 'lucide-react';
-import { SERVICES } from './constants';
+import { SERVICES } from '../constants/constants';
 
 const FAQItem: React.FC<{ faq: { question: string; answer: string }; isOpen: boolean; toggle: () => void }> = ({ faq, isOpen, toggle }) => (
   <div className="border-b border-gray-100 last:border-0">

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { PARTNER_LOGOS, STATS } from './constants';
+import { PARTNER_LOGOS, STATS } from '../../constants/constants';
 
 const CountingNumber = ({ value }: { value: string }) => {
   const [displayValue, setDisplayValue] = useState(0);

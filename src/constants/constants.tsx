@@ -1,4 +1,4 @@
-import { Service, Stat, Partner, Testimonial } from './types';
+import { Service, Stat, Partner, Testimonial } from '../types/types';
 
 export interface HeroSlide {
   id: string;

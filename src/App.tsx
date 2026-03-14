@@ -1,15 +1,15 @@
 
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
-import { HomePage } from './HomePage';
-import { AboutPage } from './AboutPage';
-import { ServicesPage } from './ServicesPage';
-import { ServiceDetailPage } from './ServiceDetailPage';
-import { PartnersPage } from './PartnersPage';
-import { ContactPage } from './ContactPage';
-import { WhatsAppWidget } from './WhatsAppWidget';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
+import { ServicesPage } from './pages/ServicesPage';
+import { ServiceDetailPage } from './pages/ServiceDetailPage';
+import { PartnersPage } from './pages/PartnersPage';
+import { ContactPage } from './pages/ContactPage';
+import { WhatsAppWidget } from './components/WhatsAppWidget';
 
 export default function App() {
   return (

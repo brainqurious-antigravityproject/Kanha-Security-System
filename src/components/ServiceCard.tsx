@@ -4,7 +4,7 @@ import {
   ArrowRight, Building, Shield, Lock, Camera, Flame, Fence, 
   Video, Network, Megaphone, Search, Car, Database, Lightbulb, Zap, Droplets 
 } from 'lucide-react';
-import { Service } from './types';
+import { Service } from '../types/types';
 
 export const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
   const IconComponent = ({

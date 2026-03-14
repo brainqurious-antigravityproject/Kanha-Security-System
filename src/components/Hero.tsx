@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { HERO_SLIDES } from './constants';
+import { HERO_SLIDES } from '../constants/constants';
 
 export const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);

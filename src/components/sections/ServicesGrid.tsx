@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SERVICES } from './constants';
-import { ServiceCard } from './ServiceCard';
+import { SERVICES } from '../../constants/constants';
+import { ServiceCard } from '../ServiceCard';
 
 export const ServicesGrid = () => {
   const navigate = useNavigate();

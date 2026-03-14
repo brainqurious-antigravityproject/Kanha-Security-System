@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PARTNER_LOGOS } from './constants';
+import { PARTNER_LOGOS } from '../../constants/constants';
 
 export const Integrations = () => {
   const line1 = PARTNER_LOGOS.slice(0, 12);
