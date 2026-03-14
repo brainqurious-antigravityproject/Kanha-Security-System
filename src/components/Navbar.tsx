@@ -50,9 +50,7 @@ export const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 md:py-6 ${navbarBg}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#257995] rounded-[6px] flex items-center justify-center font-bold text-white text-xl">
-            K
-          </div>
+          <img src="/logo.png" alt="KSS Logo" className="h-10 w-auto" />
           <span className={`text-2xl font-bold font-montserrat uppercase tracking-tight ${textColor}`}>KSS</span>
         </Link>
 

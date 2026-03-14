@@ -7,7 +7,7 @@ export const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
         <div className="col-span-1 md:col-span-2 space-y-8">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#257995] rounded-[6px] flex items-center justify-center font-bold text-white text-2xl">K</div>
+            <img src="/logo.png" alt="KSS Logo" className="h-12 w-auto" />
             <span className="text-3xl font-bold font-montserrat uppercase tracking-tight">KSS</span>
           </div>
           <p className="text-white/60 text-[17px] max-w-md font-inter leading-relaxed">
