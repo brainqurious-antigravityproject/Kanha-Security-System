@@ -16,8 +16,8 @@ export const WhatsAppWidget = () => {
     >
       <svg 
         viewBox="0 0 24 24" 
-        width="28" 
-        height="28" 
+        width="26" 
+        height="26" 
         stroke="currentColor" 
         strokeWidth="0" 
         fill="currentColor" 
