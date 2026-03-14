@@ -13,7 +13,7 @@ import { WhatsAppWidget } from './WhatsAppWidget';
 
 export default function App() {
   return (
-    <HashRouter>
+    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="min-h-screen text-[#1F2937] bg-[#F5F7FA] overflow-x-hidden font-inter">
         <Navbar />
         <main>

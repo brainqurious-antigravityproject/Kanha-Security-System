@@ -11,13 +11,13 @@ export const WhatsAppWidget = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-[999] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all duration-300 group flex items-center justify-center"
+      className="fixed bottom-6 right-6 z-[999] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all duration-300 group flex items-center justify-center"
       aria-label="Contact us on WhatsApp"
     >
       <svg 
         viewBox="0 0 24 24" 
-        width="32" 
-        height="32" 
+        width="28" 
+        height="28" 
         stroke="currentColor" 
         strokeWidth="0" 
         fill="currentColor" 
