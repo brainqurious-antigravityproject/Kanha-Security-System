@@ -31,7 +31,7 @@ export const Hero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto mt-20 px-6 w-full flex flex-col items-center text-center pb-24">
         <div className="max-w-5xl space-y-8">
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-[15px] md:mt-0">
             <span className="text-[#257995] text-[11px] md:text-[16px] font-bold tracking-[0.3em] uppercase font-inter border-2 border-dotted border-[#257995]/40 px-6 py-2 rounded-full whitespace-nowrap animate-in fade-in slide-in-from-bottom-4 duration-700">
               {currentSlide.tagline}
             </span>
