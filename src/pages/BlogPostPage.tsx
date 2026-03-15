@@ -620,15 +620,15 @@ export const BlogPostPage = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="mailto:sales@kanhasecurity.in"
-              className="flex items-center gap-2 px-8 py-4 bg-[#257995] text-white rounded-full font-bold uppercase tracking-widest hover:bg-[#1a5d73] transition-colors"
+              className="flex items-center gap-2 px-4 py-3 md:px-8 md:py-4 bg-[#257995] text-white rounded-full font-bold uppercase tracking-wider md:tracking-widest text-[12px] md:text-sm hover:bg-[#1a5d73] transition-colors"
             >
-              <Mail size={20} /> sales@kanhasecurity.in
+              <Mail size={18} className="md:w-5 md:h-5" /> sales@kanhasecurity.in
             </a>
             <a 
               href="tel:+919810021487"
-              className="flex items-center gap-2 px-8 py-4 bg-[#0B1F3A] text-white rounded-full font-bold uppercase tracking-widest hover:bg-[#1a2e4a] transition-colors"
+              className="flex items-center gap-2 px-4 py-3 md:px-8 md:py-4 bg-[#0B1F3A] text-white rounded-full font-bold uppercase tracking-wider md:tracking-widest text-[12px] md:text-sm hover:bg-[#1a2e4a] transition-colors"
             >
-              <Phone size={20} /> Call: +91 9810021487
+              <Phone size={18} className="md:w-5 md:h-5" /> Call: +91 9810021487
             </a>
           </div>
         </div>
