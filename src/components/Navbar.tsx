@@ -26,9 +26,7 @@ export const Navbar = () => {
       }
     };
 
-    const linkClasses = `text-[14px] font-semibold tracking-wide transition-colors ${
-      mobile ? 'text-[#0B1F3A] hover:text-[#257995]' : (isScrolled ? 'text-[#0B1F3A] hover:text-[#257995]' : 'text-white hover:text-[#257995]')
-    }`;
+    const linkClasses = `text-[14px] font-semibold tracking-wide transition-colors text-[#0B1F3A] hover:text-[#257995]`;
 
     // If it's a regular route (not an anchor on the current page)
     if (!to.startsWith('#') || !isHome) {
@@ -43,8 +41,8 @@ export const Navbar = () => {
     );
   };
 
-  const navbarBg = isScrolled || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-[#0B1F3A]/90';
-  const textColor = isScrolled || isMobileMenuOpen ? 'text-[#0B1F3A]' : 'text-white';
+  const navbarBg = 'bg-white shadow-md';
+  const textColor = 'text-[#0B1F3A]';
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 md:py-6 ${navbarBg}`}>
