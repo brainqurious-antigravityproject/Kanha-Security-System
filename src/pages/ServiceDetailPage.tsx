@@ -85,15 +85,6 @@ export const ServiceDetailPage = () => {
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" 
               />
             </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <button className="py-4 bg-[#0B1F3A] text-white font-bold rounded-lg uppercase tracking-widest text-[11px] md:text-[12px] hover:bg-[#257995] transition-all">
-                Download Brochure
-              </button>
-              <button className="py-4 border-2 border-[#0B1F3A] text-[#0B1F3A] font-bold rounded-lg uppercase tracking-widest text-[11px] md:text-[12px] hover:bg-[#0B1F3A] hover:text-white transition-all">
-                Specifications
-              </button>
-            </div>
           </div>
 
           {/* Text Content Area */}
@@ -136,9 +127,12 @@ export const ServiceDetailPage = () => {
                   <p className="text-[16px] md:text-[18px] opacity-90 font-inter max-w-lg">
                     {service.ctaText}
                   </p>
-                  <button className="bg-white text-[#257995] w-full md:w-auto px-10 py-4 md:py-5 rounded-lg font-bold text-[14px] md:text-[15px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-lg font-montserrat">
+                  <a 
+                    href="tel:+919810021487"
+                    className="inline-block bg-white text-[#257995] w-full md:w-auto px-10 py-4 md:py-5 rounded-lg font-bold text-[14px] md:text-[15px] uppercase tracking-widest hover:bg-[#0B1F3A] hover:text-white transition-all shadow-lg font-montserrat text-center"
+                  >
                     Book Consultation
-                  </button>
+                  </a>
                 </div>
               </div>
             )}

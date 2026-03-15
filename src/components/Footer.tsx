@@ -28,19 +28,15 @@ export const Footer = () => (
         <div className="space-y-6">
           <h4 className="text-[14px] font-bold text-[#257995] uppercase tracking-widest font-montserrat">Information</h4>
           <ul className="space-y-4 text-white/50 text-[14px] font-bold font-inter">
-            <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Cookies</a></li>
+            <li><Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+            <li><Link to="/blogs" className="hover:text-white transition-colors">Blogs</Link></li>
           </ul>
         </div>
       </div>
 
-      <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[14px] text-white/30 font-bold font-inter uppercase tracking-widest gap-6">
+      <div className="pt-10 border-t border-white/10 flex flex-col items-center text-[14px] text-white/30 font-bold font-inter uppercase tracking-widest gap-6">
         <p>© 2026 Kanha Security System. All rights reserved.</p>
-        <div className="flex gap-10">
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
-        </div>
       </div>
     </div>
   </footer>

@@ -8,6 +8,7 @@ import { Integrations } from '../components/sections/Integrations';
 import { TestimonialSection } from '../components/sections/TestimonialSection';
 import { FAQSection } from '../components/sections/FAQSection';
 import { ContactSection } from '../components/sections/ContactSection';
+import { BlogSection } from '../components/sections/BlogSection';
 
 export const HomePage = () => (
   <>
@@ -19,5 +20,6 @@ export const HomePage = () => (
     <TestimonialSection />
     <FAQSection />
     <ContactSection />
+    <BlogSection />
   </>
 );

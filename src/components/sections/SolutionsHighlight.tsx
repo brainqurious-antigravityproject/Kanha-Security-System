@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export const SolutionsHighlight = () => {
@@ -22,9 +23,9 @@ export const SolutionsHighlight = () => {
                 Transform your security posture with intelligent video analytics. Our high-definition ecosystems go beyond simple recording, utilizing real-time behavioral detection and object recognition to secure your infrastructure 24/7.
               </p>
             </div>
-            <button className="flex items-center gap-3 bg-[#0B1F3A] text-white px-8 py-4 rounded-[6px] text-[14px] font-bold uppercase tracking-widest font-montserrat hover:bg-[#257995] transition-all shadow-lg group">
+            <Link to="/services" className="inline-flex items-center gap-3 bg-[#0B1F3A] text-white px-8 py-4 rounded-[6px] text-[14px] font-bold uppercase tracking-widest font-montserrat hover:bg-[#257995] transition-all shadow-lg group">
               Learn About Surveillance <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-            </button>
+            </Link>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
@@ -54,9 +55,9 @@ export const SolutionsHighlight = () => {
                 Simplify complex operations through centralized Building Management Systems (BMS). From energy optimization to climate control and fire safety, our unified dashboards provide complete command over your facility's vital functions.
               </p>
             </div>
-            <button className="flex items-center gap-3 bg-[#0B1F3A] text-white px-8 py-4 rounded-[6px] text-[14px] font-bold uppercase tracking-widest font-montserrat hover:bg-[#257995] transition-all shadow-lg group">
+            <Link to="/services" className="inline-flex items-center gap-3 bg-[#0B1F3A] text-white px-8 py-4 rounded-[6px] text-[14px] font-bold uppercase tracking-widest font-montserrat hover:bg-[#257995] transition-all shadow-lg group">
               Explore BMS Solutions <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-            </button>
+            </Link>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
@@ -86,9 +87,9 @@ export const SolutionsHighlight = () => {
                 Deploy next-generation biometric and cloud-based access control systems. Our scalable hardware solutions ensure high-security transit while maintaining frictionless entry for authorized personnel across global facilities.
               </p>
             </div>
-            <button className="flex items-center gap-3 bg-[#0B1F3A] text-white px-8 py-4 rounded-[6px] text-[14px] font-bold uppercase tracking-widest font-montserrat hover:bg-[#257995] transition-all shadow-lg group">
+            <Link to="/services" className="inline-flex items-center gap-3 bg-[#0B1F3A] text-white px-8 py-4 rounded-[6px] text-[14px] font-bold uppercase tracking-widest font-montserrat hover:bg-[#257995] transition-all shadow-lg group">
               View Access Solutions <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-            </button>
+            </Link>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">

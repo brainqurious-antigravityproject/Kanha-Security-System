@@ -29,7 +29,7 @@ export const ServicesGrid = () => {
             onClick={() => navigate('/services')}
             className="bg-transparent border-2 border-[#257995] text-white px-12 py-4 rounded-[6px] text-[14px] font-bold hover:bg-[#257995] transition-all uppercase tracking-widest font-montserrat"
           >
-            VIEW ALL 15 SERVICES
+            VIEW ALL SERVICES
           </button>
         </div>
       </div>

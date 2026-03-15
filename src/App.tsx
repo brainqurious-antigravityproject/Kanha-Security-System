@@ -9,6 +9,10 @@ import { ServicesPage } from './pages/ServicesPage';
 import { ServiceDetailPage } from './pages/ServiceDetailPage';
 import { PartnersPage } from './pages/PartnersPage';
 import { ContactPage } from './pages/ContactPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsOfServicePage } from './pages/TermsOfServicePage';
+import { BlogListPage } from './pages/BlogListPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 
 export default function App() {
@@ -24,6 +28,10 @@ export default function App() {
             <Route path="/service/:id" element={<ServiceDetailPage />} />
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/blogs" element={<BlogListPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             {/* Catch-all route to prevent white screen on invalid paths */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
