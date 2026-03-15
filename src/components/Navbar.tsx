@@ -51,7 +51,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center h-full">
           <img 
-            src="/logo.png" 
+            src="/Kanha_Security_Logo.webp" 
             alt="KSS Logo" 
             className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${!isScrolled && !isMobileMenuOpen ? 'brightness-0 invert' : ''}`} 
           />
