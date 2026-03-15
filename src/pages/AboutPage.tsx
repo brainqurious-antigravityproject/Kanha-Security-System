@@ -201,7 +201,7 @@ export const AboutPage = () => {
                   <span className="w-10 h-[2px] bg-[#257995]"></span>
                   <span className="text-[14px] font-bold text-[#257995] uppercase tracking-widest font-inter">The KSS Edge</span>
                 </div>
-                <h2 className="text-[36px] md:text-[42px] font-bold text-[#0B1F3A] font-montserrat uppercase leading-tight">
+                <h2 className="text-[30px] md:text-[42px] font-bold text-[#0B1F3A] font-montserrat uppercase leading-tight">
                   UNCOMPROMISING <br />
                   <span className="text-[#257995]">QUALITY STANDARDS</span>
                 </h2>
