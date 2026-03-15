@@ -49,9 +49,12 @@ export const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 md:py-6 ${navbarBg}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="KSS Logo" className="h-10 w-auto" />
-          <span className={`text-2xl font-bold font-montserrat uppercase tracking-tight ${textColor}`}>KSS</span>
+        <Link to="/" className="flex items-center h-full">
+          <img 
+            src="/logo.png" 
+            alt="KSS Logo" 
+            className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${!isScrolled && !isMobileMenuOpen ? 'brightness-0 invert' : ''}`} 
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
