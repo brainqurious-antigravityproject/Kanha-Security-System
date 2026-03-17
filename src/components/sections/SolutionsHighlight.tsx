@@ -30,7 +30,7 @@ export const SolutionsHighlight = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img
-                src="/services_images/security_surveillance_systems.jpg"
+                src="/project_images/security_surveillance_systems.webp"
                 alt="AI Surveillance Systems"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
