@@ -51,7 +51,8 @@ export const Navbar = () => {
           <img 
             src="/kanha_security_logo.webp" 
             alt="KSS Logo" 
-            className="h-10 md:h-12 w-auto object-contain transition-all duration-300" 
+            style={{height:'22px', width:'auto'}} 
+            className="object-contain transition-all duration-300" 
           />
         </Link>
 

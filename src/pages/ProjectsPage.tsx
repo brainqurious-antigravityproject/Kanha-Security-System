@@ -108,7 +108,6 @@ export const ProjectsPage = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-[#257995] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
