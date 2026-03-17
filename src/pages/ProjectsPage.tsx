@@ -47,9 +47,9 @@ const PROJECTS = [
     category: "Commercial"
   },
   {
-    title: "Amity University Campus",
-    location: "Noida, Uttar Pradesh",
-    description: "Advanced campus-wide security integration featuring AI-powered surveillance, automated entry systems, and centralized monitoring for enhanced student safety.",
+    title: "Shiv Nadar School",
+    location: "Gurugram & Noida",
+    description: "Designed and installed state-of-the-art security infrastructure for multiple campuses, featuring advanced access control, perimeter security, and campus-wide surveillance.",
     image: "/project_images/shiv_nadar_school__project-2.webp",
     category: "Education"
   },
@@ -71,7 +71,7 @@ export const ProjectsPage = () => {
           <div className="absolute top-0 left-0 w-96 h-96 bg-[#257995] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#257995] rounded-full blur-[120px] translate-x-1/2 translate-y-1/2" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,8 +104,8 @@ export const ProjectsPage = () => {
                 className="group bg-[#F5F7FA] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
@@ -116,7 +116,7 @@ export const ProjectsPage = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-8">
                   <div className="flex items-center gap-2 text-[#257995] mb-3">
                     <MapPin size={14} />
@@ -144,7 +144,7 @@ export const ProjectsPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-[#0B1F3A] rounded-[40px] p-12 md:p-20 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#257995]/20 rounded-full blur-3xl -mr-32 -mt-32" />
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold font-montserrat uppercase mb-6">
@@ -164,7 +164,7 @@ export const ProjectsPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 gap-4">
                 {[
                   "Government Institutions",
