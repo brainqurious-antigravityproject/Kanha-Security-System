@@ -48,11 +48,10 @@ export const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 md:py-6 ${navbarBg}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center h-full">
-          <img 
-            src="/kanha_security_logo.webp" 
-            alt="KSS Logo" 
-            style={{height:'22px', width:'auto'}} 
-            className="object-contain transition-all duration-300" 
+          <img
+            src="/kanha_security_logo.webp"
+            alt="KSS Logo"
+            className="h-22 md:h-22 w-auto object-contain transition-all duration-300"
           />
         </Link>
 
