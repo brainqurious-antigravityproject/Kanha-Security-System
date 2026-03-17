@@ -6,6 +6,7 @@ import { SolutionsHighlight } from '../components/sections/SolutionsHighlight';
 import { ServicesGrid } from '../components/sections/ServicesGrid';
 import { Integrations } from '../components/sections/Integrations';
 import { TestimonialSection } from '../components/sections/TestimonialSection';
+import { ProjectsSection } from '../components/sections/ProjectsSection';
 import { FAQSection } from '../components/sections/FAQSection';
 import { ContactSection } from '../components/sections/ContactSection';
 import { BlogSection } from '../components/sections/BlogSection';
@@ -18,6 +19,7 @@ export const HomePage = () => (
     <ServicesGrid />
     <Integrations />
     <TestimonialSection />
+    <ProjectsSection />
     <FAQSection />
     <ContactSection />
     <BlogSection />

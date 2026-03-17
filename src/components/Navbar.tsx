@@ -59,6 +59,7 @@ export const Navbar = () => {
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/services">SERVICES</NavLink>
+          <NavLink to="/projects">PROJECTS</NavLink>
           <NavLink to="/partners">PARTNERS</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
         </div>
@@ -79,6 +80,7 @@ export const Navbar = () => {
           <NavLink to="/" mobile onClick={() => setIsMobileMenuOpen(false)}>HOME</NavLink>
           <NavLink to="/about" mobile onClick={() => setIsMobileMenuOpen(false)}>ABOUT</NavLink>
           <NavLink to="/services" mobile onClick={() => setIsMobileMenuOpen(false)}>SERVICES</NavLink>
+          <NavLink to="/projects" mobile onClick={() => setIsMobileMenuOpen(false)}>PROJECTS</NavLink>
           <NavLink to="/partners" mobile onClick={() => setIsMobileMenuOpen(false)}>PARTNERS</NavLink>
           <NavLink to="/contact" mobile onClick={() => setIsMobileMenuOpen(false)}>CONTACT</NavLink>
         </div>

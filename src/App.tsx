@@ -13,6 +13,7 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { BlogListPage } from './pages/BlogListPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { ProjectsPage } from './pages/ProjectsPage';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:id" element={<ServiceDetailPage />} />
             <Route path="/partners" element={<PartnersPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
