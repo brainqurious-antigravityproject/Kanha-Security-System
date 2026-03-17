@@ -62,7 +62,7 @@ export const SolutionsHighlight = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img
-                src="/services_images/building_management_system.webp"
+                src="/project_images/building_management_system.webp"
                 alt="Building Management Automation"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
@@ -94,7 +94,7 @@ export const SolutionsHighlight = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img
-                src="/services_images/access_control_modern.webp"
+                src="/project_images/access_control_modern.webp"
                 alt="Intelligent Access Management"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />

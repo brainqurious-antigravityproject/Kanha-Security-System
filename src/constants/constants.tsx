@@ -22,7 +22,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'SECURED BY',
     highlight: 'INNOVATION',
     description: 'Kanha Security System develops advanced electronic safety and automation solutions designed to protect the infrastructure of tomorrow. Empowering organizations to stay ahead of evolving threats.',
-    imageUrl: '/services_images/security_surveillance_systems.webp',
+    imageUrl: '/project_images/security_surveillance_systems.webp',
     iconName: 'Shield'
   },
   {
@@ -31,7 +31,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'MPASS',
     highlight: 'IDENTITY',
     description: 'Protect your enterprise with robust identity verification. Multi-factor solutions designed for high-security environments, ensuring only authorized access to your most critical assets.',
-    imageUrl: '/services_images/access_control_modern.webp',
+    imageUrl: '/project_images/access_control_modern.webp',
     iconName: 'Lock'
   },
   {
@@ -40,7 +40,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'LINQ2',
     highlight: 'CONNECT',
     description: 'Enterprise-grade messaging delivery with over 10B+ monthly capacity. Scalable, secure, and lightning-fast communication infrastructure for modern global businesses.',
-    imageUrl: '/services_images/IT_Networking.webp',
+    imageUrl: '/project_images/IT_Networking.webp',
     iconName: 'Network'
   },
   {
@@ -58,7 +58,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'CYBER',
     highlight: 'SPHERE',
     description: 'A unified command and control hub for total building automation and security management. Real-time visibility and proactive threat detection in a single intuitive interface.',
-    imageUrl: '/services_images/building_management_system.webp',
+    imageUrl: '/project_images/building_management_system.webp',
     iconName: 'Zap'
   }
 ];
@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
       'Mobile monitoring & historical trend analytics'
     ],
     icon: 'Building',
-    imageUrl: '/services_images/building_management_system.webp',
+    imageUrl: '/project_images/building_management_system.webp',
     ctaText: 'Request a BMS site assessment and energy audit.',
     faqs: [
       { question: 'How does a BMS reduce energy costs?', answer: 'By optimizing schedules, reducing simultaneous loads, and using real-time sensor feedback to control HVAC and lighting, lowering consumption and peak demand.' },
@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
       'Scalable architecture for multi-site deployments'
     ],
     icon: 'Shield',
-    imageUrl: '/services_images/security_surveillance_systems.webp',
+    imageUrl: '/project_images/security_surveillance_systems.webp',
     ctaText: 'Schedule a demo of the command-control interface.',
     faqs: [
       { question: 'Will ISMS work across multiple sites?', answer: 'Yes — the system supports centralized management for multiple locations with role-based access.' },
@@ -116,7 +116,7 @@ export const SERVICES: Service[] = [
       'Centralized policy management & audit logs'
     ],
     icon: 'Lock',
-    imageUrl: '/services_images/access_control_modern.webp',
+    imageUrl: '/project_images/access_control_modern.webp',
     ctaText: 'Get a free door-count plan and credentialing strategy.',
     faqs: [
       { question: 'Can access policies be changed centrally?', answer: 'Yes — access rights, schedules and groups are administered centrally and pushed to controllers.' },
@@ -136,7 +136,7 @@ export const SERVICES: Service[] = [
       'Health monitoring and automated alerts'
     ],
     icon: 'Camera',
-    imageUrl: '/services_images/security_surveillance_systems_2.webp',
+    imageUrl: '/project_images/security_surveillance_systems_2.webp',
     ctaText: 'Request a CCTV site survey and camera placement plan.',
     faqs: [
       { question: 'IP or analogue — which should I choose?', answer: 'IP cameras are recommended for higher resolution and analytics; analogue is cost-effective for simple coverage.' },
@@ -156,7 +156,7 @@ export const SERVICES: Service[] = [
       'Compliance with local codes and standards'
     ],
     icon: 'Flame',
-    imageUrl: '/services_images/fire_alarm_system.webp',
+    imageUrl: '/project_images/fire_alarm_system.webp',
     ctaText: 'Arrange a fire-safety site assessment and evacuation plan.',
     faqs: [
       { question: 'What’s the difference between addressable and conventional systems?', answer: 'Addressable systems identify the exact detector location; conventional systems identify zones.' },
@@ -176,7 +176,7 @@ export const SERVICES: Service[] = [
       'Maintenance and recharging services'
     ],
     icon: 'Zap',
-    imageUrl: '/services_images/fm_200_system.webp',
+    imageUrl: '/project_images/fm_200_system.webp',
     ctaText: 'Request a protected-space suppression design.',
     faqs: [
       { question: 'Are clean agents safe for electronics?', answer: 'Yes — FM-200 and NOVEC are non-conductive and safe for sensitive equipment.' },
@@ -196,7 +196,7 @@ export const SERVICES: Service[] = [
       'False-alarm mitigation and zone tuning'
     ],
     icon: 'Fence',
-    imageUrl: '/services_images/perimeter-protection-system.svg',
+    imageUrl: '/project_images/perimeter-protection-system.svg',
     ctaText: 'Book a perimeter threat assessment.',
     faqs: [
       { question: 'Do perimeter sensors give many false alarms?', answer: 'Proper sensor selection and tuning reduce false alarms; we tune systems to site conditions.' },
@@ -216,7 +216,7 @@ export const SERVICES: Service[] = [
       'Integration with fire alarm and ISMS'
     ],
     icon: 'Megaphone',
-    imageUrl: '/services_images/public_address_system.webp',
+    imageUrl: '/project_images/public_address_system.webp',
     ctaText: 'Get a zoning and intelligibility study.',
     faqs: [
       { question: 'What is voice evacuation?', answer: 'A high-priority system that overrides other audio to broadcast evacuation instructions with clear intelligibility.' },
@@ -236,7 +236,7 @@ export const SERVICES: Service[] = [
       'Commissioning and user training included'
     ],
     icon: 'Video',
-    imageUrl: '/services_images/audio-visual-lighting-control.svg',
+    imageUrl: '/project_images/audio-visual-lighting-control.svg',
     ctaText: 'Book an AV workflow and control UX review.',
     faqs: [
       { question: 'Will AV work with popular video-conferencing platforms?', answer: 'Yes — systems are tested with major vendors and configured for single-touch meeting start.' },
@@ -256,7 +256,7 @@ export const SERVICES: Service[] = [
       'Documentation and test certification'
     ],
     icon: 'Network',
-    imageUrl: '/services_images/IT_Networking.webp',
+    imageUrl: '/project_images/IT_Networking.webp',
     ctaText: 'Request a network capacity and vulnerability review.',
     faqs: [
       { question: 'Do you handle cabling certification?', answer: 'Yes — we provide end-to-end testing and certification (FLUKE test reports).' },
@@ -276,7 +276,7 @@ export const SERVICES: Service[] = [
       'Integration with BMS and fire suppression'
     ],
     icon: 'Database',
-    imageUrl: '/services_images/wld_system.webp',
+    imageUrl: '/project_images/wld_system.webp',
     ctaText: 'Arrange a datacentre risk assessment.',
     faqs: [
       { question: 'Why use VESDA?', answer: 'VESDA detects microscopic smoke early, enabling intervention before visible smoke or fire develops.' },
@@ -296,7 +296,7 @@ export const SERVICES: Service[] = [
       'Operator training and calibration services'
     ],
     icon: 'Search',
-    imageUrl: '/services_images/contraband-detection-solutions.svg',
+    imageUrl: '/project_images/contraband-detection-solutions.svg',
     ctaText: 'Request equipment selection and screening-flow design.',
     faqs: [
       { question: 'Are baggage scanners certified?', answer: 'Yes — we supply certified units meeting regulatory standards.' },
@@ -316,7 +316,7 @@ export const SERVICES: Service[] = [
       'Local maintenance and spare parts support'
     ],
     icon: 'Car',
-    imageUrl: '/services_images/gate-automation-barriers.svg',
+    imageUrl: '/project_images/gate-automation-barriers.svg',
     ctaText: 'Get a traffic flow & gate-hardware feasibility report.',
     faqs: [
       { question: 'Can gates integrate with visitor management?', answer: 'Yes — ANPR and intercom integration with booking systems is available.' },
@@ -336,7 +336,7 @@ export const SERVICES: Service[] = [
       'Annual testing and maintenance contracts'
     ],
     icon: 'Droplets',
-    imageUrl: '/services_images/emergency-lighting-fire-hydrant.svg',
+    imageUrl: '/project_images/emergency-lighting-fire-hydrant.svg',
     ctaText: 'Request a compliance check for emergency lighting and hydrants.',
     faqs: [
       { question: 'How frequently must emergency lights be tested?', answer: 'Monthly functional checks and annual full-duration testing are typical.' },
@@ -356,7 +356,7 @@ export const SERVICES: Service[] = [
       'Reporting and corrective action guidance'
     ],
     icon: 'Zap',
-    imageUrl: '/services_images/rodent_repellent_system.webp',
+    imageUrl: '/project_images/rodent_repellent_system.webp',
     ctaText: 'Book a site survey for environmental and pest-risk mitigation.',
     faqs: [
       { question: 'How do leak detectors alert operators?', answer: 'They trigger local alarms and can send alerts to central monitoring systems for immediate action.' },

@@ -69,7 +69,7 @@ export const AboutPage = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/5 aspect-video md:aspect-square lg:aspect-video">
                 <img 
-                  src="/services_images/building_management_system.webp" 
+                  src="/project_images/building_management_system.webp" 
                   alt="Professional Office Space" 
                   className="w-full h-full object-cover"
                 />
@@ -176,7 +176,7 @@ export const AboutPage = () => {
               <div className="relative grid grid-cols-2 gap-4">
                 <div className="space-y-4 pt-12">
                   <div className="rounded-2xl overflow-hidden h-48 md:h-64 shadow-lg border border-gray-100">
-                    <img src="/services_images/access_control_modern.webp" alt="Detail 1" className="w-full h-full object-cover" />
+                    <img src="/project_images/access_control_modern.webp" alt="Detail 1" className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-[#0B1F3A] rounded-2xl p-6 text-white text-center">
                     <Award size={32} className="mx-auto mb-2 text-[#257995]" />
@@ -189,7 +189,7 @@ export const AboutPage = () => {
                     <span className="text-xs font-bold uppercase tracking-wider block">International Standards</span>
                   </div>
                   <div className="rounded-2xl overflow-hidden h-48 md:h-64 shadow-lg border border-gray-100">
-                    <img src="/services_images/fire_alarm_system.webp" alt="Detail 2" className="w-full h-full object-cover" />
+                    <img src="/project_images/fire_alarm_system.webp" alt="Detail 2" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
