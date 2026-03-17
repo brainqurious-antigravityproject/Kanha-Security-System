@@ -5,7 +5,7 @@ export const BLOG_POSTS = [
     date: "March 15, 2026",
     author: "KSS Delhi",
     slug: "building-management-systems-delhi",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+    image: "/services_images/building_management_system.webp"
   },
   {
     title: "IP CCTV vs Analogue CCTV: Which Surveillance System Is Right for Your Business in Delhi?",
@@ -13,7 +13,7 @@ export const BLOG_POSTS = [
     date: "March 15, 2026",
     author: "KSS Delhi",
     slug: "ip-cctv-vs-analogue-cctv-delhi",
-    image: "https://images.unsplash.com/photo-1557597774-9d2739f85a94?auto=format&fit=crop&q=80&w=800"
+    image: "/services_images/security_surveillance_systems_2.webp"
   },
   {
     title: "Fire Protection Systems for Commercial Buildings in Delhi: Types, Standards & What You Need to Know",
@@ -21,6 +21,6 @@ export const BLOG_POSTS = [
     date: "March 15, 2026",
     author: "KSS Delhi",
     slug: "fire-protection-systems-commercial-buildings-delhi",
-    image: "https://images.unsplash.com/photo-1599700403969-f77b3df74e8e?auto=format&fit=crop&q=80&w=800"
+    image: "/services_images/fire_alarm_system.webp"
   }
 ];

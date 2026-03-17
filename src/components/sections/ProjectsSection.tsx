@@ -8,19 +8,19 @@ const FEATURED_PROJECTS = [
   {
     title: "Ch. Charan Singh Haryana Agricultural University",
     location: "Hisar, Haryana",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_1.png",
+    image: "/project_images/charan_singh_university__project.webp",
     category: "Education"
   },
   {
     title: "Shiv Nadar School",
     location: "Gurugram & Noida",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_3.png",
+    image: "/project_images/shiv_nadar_school__project-1.webp",
     category: "Education"
   },
   {
     title: "Zara Rossa Residential Complex",
     location: "Gurugram, Haryana",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_2.png",
+    image: "/project_images/zara_society_project.webp",
     category: "Residential"
   }
 ];

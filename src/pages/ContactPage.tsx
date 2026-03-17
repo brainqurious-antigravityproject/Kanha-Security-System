@@ -259,7 +259,7 @@ export const ContactPage = () => {
             </div>
 
             <div className="bg-[#0B1F3A] rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+              <div className="absolute inset-0 opacity-10 pointer-events-none" />
               <div className="relative z-10 space-y-4">
                 <h4 className="text-lg font-bold font-montserrat uppercase">Headquarters Location</h4>
                 {/* Increased font size from text-sm (14px) to 16px and removed coordinate text */}

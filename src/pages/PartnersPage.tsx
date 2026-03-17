@@ -74,7 +74,7 @@ export const PartnersPage = () => {
 
       {/* Customer Showcase */}
       <section className="py-24 bg-[#0B1F3A] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] pointer-events-none" />
+        <div className="absolute inset-0 opacity-5 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="mb-16 text-center space-y-4">

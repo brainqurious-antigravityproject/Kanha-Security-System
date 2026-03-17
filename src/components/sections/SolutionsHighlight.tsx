@@ -30,7 +30,7 @@ export const SolutionsHighlight = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img 
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" 
+                src="/services_images/security_surveillance_systems.webp" 
                 alt="AI Surveillance Systems" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
@@ -62,7 +62,7 @@ export const SolutionsHighlight = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" 
+                src="/services_images/building_management_system.webp" 
                 alt="Building Management Automation" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
@@ -94,7 +94,7 @@ export const SolutionsHighlight = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <img 
-                src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200" 
+                src="/services_images/access_control_modern.webp" 
                 alt="Intelligent Access Management" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />

@@ -1,0 +1,7 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#0B1F3A"/>
+  <rect width="800" height="8" y="246" fill="#257995" opacity="0.3"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="bold" font-size="32" fill="#F5F7FA" style="text-transform: uppercase; letter-spacing: 2px;">
+    Audio-Visual &amp; Lighting Control
+  </text>
+</svg>

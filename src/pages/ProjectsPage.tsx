@@ -8,56 +8,56 @@ const PROJECTS = [
     title: "Ch. Charan Singh Haryana Agricultural University",
     location: "Hisar, Haryana",
     description: "Implemented a comprehensive security and surveillance network across the university campus, including high-definition IP CCTV systems and integrated fire safety protocols.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_1.png",
+    image: "/project_images/charan_singh_university__project.webp",
     category: "Education"
   },
   {
     title: "Shiv Nadar School",
     location: "Gurugram & Noida",
     description: "Designed and installed state-of-the-art security infrastructure for multiple campuses, featuring advanced access control, perimeter security, and campus-wide surveillance.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_3.png",
+    image: "/project_images/shiv_nadar_school__project-1.webp",
     category: "Education"
   },
   {
     title: "Zara Rossa Residential Complex",
     location: "Gurugram, Haryana",
     description: "Complete residential security solution including multi-tier access control, visitor management systems, and 24/7 surveillance for the entire complex.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_2.png",
+    image: "/project_images/zara_society_project.webp",
     category: "Residential"
   },
   {
     title: "Guru Gobind Singh Indraprastha University",
     location: "Dwarka, Delhi",
     description: "Deployment of large-scale IP-based surveillance and network infrastructure to ensure safety across the sprawling university campus.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_5.png",
+    image: "/project_images/GGS_Indraprashta_University_project.webp",
     category: "Education"
   },
   {
     title: "Tata Communications Data Center",
     location: "Delhi NCR",
     description: "High-security integration for mission-critical infrastructure, featuring biometric access control and advanced fire suppression systems.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_6.png",
+    image: "/project_images/tata_project.webp",
     category: "Corporate"
   },
   {
     title: "Modern Corporate Hub",
     location: "Noida, UP",
     description: "Integrated Building Management System (IBMS) for a multi-tenant corporate building, optimizing energy efficiency and security operations.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image.png",
+    image: "/project_images/corporate_project.webp",
     category: "Commercial"
   },
   {
     title: "Amity University Campus",
     location: "Noida, Uttar Pradesh",
     description: "Advanced campus-wide security integration featuring AI-powered surveillance, automated entry systems, and centralized monitoring for enhanced student safety.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_4.png",
+    image: "/project_images/shiv_nadar_school__project-2.webp",
     category: "Education"
   },
   {
     title: "DLF Cyber City Corporate Office",
     location: "Gurugram, Haryana",
     description: "Premium security deployment for a high-profile corporate office, including multi-factor biometric authentication and smart visitor management.",
-    image: "https://ais-dev-7ghgz654lihkhw4kgk772u-105713341735.asia-southeast1.run.app/api/attachments/037153e5-4e46-4c55-9e80-51f3915529ce/67d80587-c54d-450f-901b-c75c0262111a/image_8.png",
+    image: "/project_images/society_project.webp",
     category: "Corporate"
   }
 ];
