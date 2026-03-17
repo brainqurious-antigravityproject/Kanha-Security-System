@@ -6,7 +6,7 @@ export const SolutionsHighlight = () => {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 space-y-32">
-        
+
         {/* Row 1: Content Left, Image Right */}
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           <div className="w-full lg:w-1/2 space-y-8">
@@ -29,9 +29,9 @@ export const SolutionsHighlight = () => {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
-              <img 
-                src="/services_images/security_surveillance_systems.webp" 
-                alt="AI Surveillance Systems" 
+              <img
+                src="/services_images/security_surveillance_systems.jpg"
+                alt="AI Surveillance Systems"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0B1F3A]/40 to-transparent" />
@@ -61,9 +61,9 @@ export const SolutionsHighlight = () => {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
-              <img 
-                src="/services_images/building_management_system.webp" 
-                alt="Building Management Automation" 
+              <img
+                src="/services_images/building_management_system.webp"
+                alt="Building Management Automation"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-tl from-[#0B1F3A]/40 to-transparent" />
@@ -93,9 +93,9 @@ export const SolutionsHighlight = () => {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
-              <img 
-                src="/services_images/access_control_modern.webp" 
-                alt="Intelligent Access Management" 
+              <img
+                src="/services_images/access_control_modern.webp"
+                alt="Intelligent Access Management"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0B1F3A]/40 to-transparent" />
