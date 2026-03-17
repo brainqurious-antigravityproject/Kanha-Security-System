@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -15,10 +15,11 @@ import { BlogListPage } from './pages/BlogListPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 export default function App() {
   return (
-    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="min-h-screen text-[#1F2937] bg-[#F5F7FA] overflow-x-hidden font-inter">
         <Navbar />
         <main>
@@ -35,12 +36,12 @@ export default function App() {
             <Route path="/blogs" element={<BlogListPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             {/* Catch-all route to prevent white screen on invalid paths */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />
         <WhatsAppWidget />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

@@ -112,6 +112,8 @@ export const ContactSection = () => {
                 onSubmit={handleSubmit}
                 className="space-y-6 md:space-y-8 relative z-10"
               >
+                <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                <input type="hidden" name="_captcha" value="true" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-[13px] font-bold text-[#0B1F3A] uppercase font-inter tracking-wider">Full Name</label>
@@ -119,6 +121,7 @@ export const ContactSection = () => {
                       type="text" 
                       name="name"
                       required
+                      maxLength={100}
                       className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#257995]/20 focus:border-[#257995] outline-none transition-all font-inter" 
                       placeholder="John Doe" 
                     />
@@ -129,6 +132,7 @@ export const ContactSection = () => {
                       type="email" 
                       name="email"
                       required
+                      maxLength={100}
                       className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#257995]/20 focus:border-[#257995] outline-none transition-all font-inter" 
                       placeholder="john@example.com" 
                     />
@@ -164,6 +168,7 @@ export const ContactSection = () => {
                     rows={4} 
                     name="message"
                     required
+                    maxLength={1000}
                     className="w-full bg-[#F5F7FA] border-transparent rounded-[8px] p-4 text-[#0B1F3A] focus:bg-white focus:ring-2 focus:ring-[#257995]/20 focus:border-[#257995] outline-none transition-all resize-none font-inter" 
                     placeholder="Tell us about your project requirements..."
                   ></textarea>
