@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://kanhasecurity.in/sitemap.xml
+Disallow: /privacy-policy
+Disallow: /terms-of-service
