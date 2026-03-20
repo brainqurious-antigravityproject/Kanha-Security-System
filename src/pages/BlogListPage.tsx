@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, ChevronRight } from 'lucide-react';
 import { BLOG_POSTS } from '../constants/blogs';
 
 export const BlogListPage = () => {
@@ -11,11 +11,16 @@ export const BlogListPage = () => {
 
   return (
     <div className="bg-[#F5F7FA] min-h-screen">
-      <section className="bg-[#0B1F3A] pt-20 pb-24 md:pt-40 md:pb-24 relative overflow-hidden">
+      <section className="bg-[#0B1F3A] pt-32 pb-24 md:pt-40 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <nav className="flex justify-center items-center gap-x-2 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-[#257995]/60 mb-8 md:mb-12 font-inter">
+            <Link to="/" className="hover:text-[#257995] transition-colors text-white/40">Home</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <span className="text-[#257995]">Blogs</span>
+          </nav>
           <h1 className="text-[42px] md:text-[64px] font-bold text-white font-montserrat uppercase tracking-tight leading-tight mb-6">
             KSS <span className="text-[#257995]">INSIGHTS</span>
           </h1>

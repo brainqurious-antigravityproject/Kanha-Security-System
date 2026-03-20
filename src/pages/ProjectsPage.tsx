@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { CheckCircle2, MapPin, Building2 } from 'lucide-react';
+import { CheckCircle2, MapPin, Building2, ChevronRight } from 'lucide-react';
 
 const PROJECTS = [
   {
@@ -66,13 +67,18 @@ export const ProjectsPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[#0B1F3A] pt-20 pb-24 md:pt-24 md:pb-24 text-white relative overflow-hidden">
+      <section className="bg-[#0B1F3A] pt-32 pb-24 md:pt-24 md:pb-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-[#257995] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#257995] rounded-full blur-[120px] translate-x-1/2 translate-y-1/2" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <nav className="flex justify-center items-center gap-x-2 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-[#257995]/60 mb-8 md:mb-12 font-inter">
+            <Link to="/" className="hover:text-[#257995] transition-colors text-white/40">Home</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <span className="text-[#257995]">Projects</span>
+          </nav>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 // Added missing Award and ShieldCheck imports
-import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Award, ShieldCheck, CheckCircle2, Loader2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Award, ShieldCheck, CheckCircle2, Loader2, ChevronRight } from 'lucide-react';
 
 export const ContactPage = () => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -67,11 +68,16 @@ export const ContactPage = () => {
   return (
     <div className="bg-[#F5F7FA] min-h-screen">
       {/* Hero Section */}
-      <section className="bg-[#0B1F3A] pt-20 pb-24 md:pt-40 md:pb-24 relative overflow-hidden">
+      <section className="bg-[#0B1F3A] pt-32 pb-24 md:pt-40 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-8">
+          <nav className="flex justify-center items-center gap-x-2 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-[#257995]/60 mb-8 md:mb-12 font-inter">
+            <Link to="/" className="hover:text-[#257995] transition-colors text-white/40">Home</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <span className="text-[#257995]">Contact</span>
+          </nav>
           <div className="flex justify-center">
             <span className="text-[#257995] text-[12px] font-bold tracking-[0.4em] uppercase font-inter border border-[#257995]/30 px-6 py-2 rounded-full">
               Get In Touch

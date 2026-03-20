@@ -46,7 +46,7 @@ export const ServiceDetailPage = () => {
   return (
     <div className="bg-[#F5F7FA] min-h-screen text-[#0B1F3A]">
       {/* Detail Header & Breadcrumbs */}
-      <div className="bg-[#0B1F3A] pt-20 pb-12 md:pt-36 md:pb-20 relative overflow-hidden">
+      <div className="bg-[#0B1F3A] pt-32 pb-12 md:pt-36 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         

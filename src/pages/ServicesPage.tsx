@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import { SERVICES } from '../constants/constants';
 import { ServiceCard } from '../components/ServiceCard';
 
@@ -12,11 +13,17 @@ export const ServicesPage = () => {
   return (
     <div className="bg-[#F5F7FA] min-h-screen">
       {/* Header Section */}
-      <div className="bg-[#0B1F3A] pt-20 pb-20 md:pt-40 md:pb-20 relative overflow-hidden">
+      <div className="bg-[#0B1F3A] pt-32 pb-20 md:pt-40 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-6">
+          <nav className="flex justify-center items-center gap-x-2 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-white/40 mb-8 md:mb-12 font-inter">
+            <Link to="/" className="hover:text-[#257995] transition-colors">Home</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <span className="text-[#257995]">Services</span>
+          </nav>
+
           <div className="flex justify-center items-center gap-3">
             <span className="w-10 h-[2px] bg-[#257995]"></span>
             <span className="text-[14px] font-bold text-[#257995] uppercase tracking-widest font-inter">Full Portfolio</span>

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, User, Clock, ChevronLeft, Share2, Plus, Minus, Facebook, Twitter, Linkedin, MessageCircle, Mail, Phone } from 'lucide-react';
+import { Calendar, User, Clock, ChevronLeft, ChevronRight, Share2, Plus, Minus, Facebook, Twitter, Linkedin, MessageCircle, Mail, Phone } from 'lucide-react';
 
 export const BlogPostPage = () => {
   const { slug } = useParams();
@@ -561,7 +561,7 @@ export const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="pt-20 pb-24 md:pt-40 md:pb-24 text-center">
+      <div className="pt-32 pb-24 md:pt-40 md:pb-24 text-center">
         <h1 className="text-2xl font-bold">Blog post not found</h1>
         <Link to="/blogs" className="text-[#257995] hover:underline mt-4 inline-block">Back to Blogs</Link>
       </div>
@@ -579,14 +579,18 @@ export const BlogPostPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Header */}
-      <header className="bg-[#0B1F3A] pt-20 pb-16 md:pt-40 md:pb-16 relative overflow-hidden">
+      <header className="bg-[#0B1F3A] pt-32 pb-16 md:pt-40 md:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <Link to="/blogs" className="flex items-center gap-2 text-[#257995] font-bold text-sm uppercase tracking-widest mb-8 hover:translate-x-[-4px] transition-transform">
-            <ChevronLeft size={16} /> Back to Blogs
-          </Link>
+          <nav className="flex items-center gap-x-2 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-[#257995]/60 mb-8 md:mb-12 font-inter">
+            <Link to="/" className="hover:text-[#257995] transition-colors text-white/40">Home</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <Link to="/blogs" className="hover:text-[#257995] transition-colors text-white/40">Blogs</Link>
+            <ChevronRight size={12} className="md:size-[14px]" />
+            <span className="text-[#257995]">Article</span>
+          </nav>
           
           <h1 className="text-[32px] md:text-[48px] font-bold text-white font-montserrat uppercase leading-tight mb-8">
             {post.title}
