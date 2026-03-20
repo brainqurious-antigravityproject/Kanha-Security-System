@@ -64,9 +64,9 @@ const PROJECTS = [
 
 export const ProjectsPage = () => {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
-      <section className="bg-[#0B1F3A] py-24 text-white relative overflow-hidden">
+      <section className="bg-[#0B1F3A] pt-20 pb-24 md:pt-24 md:pb-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-[#257995] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#257995] rounded-full blur-[120px] translate-x-1/2 translate-y-1/2" />

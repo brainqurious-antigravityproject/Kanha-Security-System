@@ -48,7 +48,7 @@ export const AboutPage = () => {
   return (
     <div className="bg-[#F5F7FA] min-h-screen">
       {/* Hero Section */}
-      <section className="pt-40 pb-24 bg-[#0B1F3A] relative overflow-hidden">
+      <section className="bg-[#0B1F3A] pt-20 pb-24 md:pt-40 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         

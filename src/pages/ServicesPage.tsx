@@ -12,7 +12,7 @@ export const ServicesPage = () => {
   return (
     <div className="bg-[#F5F7FA] min-h-screen">
       {/* Header Section */}
-      <div className="pt-40 pb-20 bg-[#0B1F3A] relative overflow-hidden">
+      <div className="bg-[#0B1F3A] pt-20 pb-20 md:pt-40 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         

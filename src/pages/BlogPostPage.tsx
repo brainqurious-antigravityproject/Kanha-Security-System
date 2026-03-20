@@ -561,7 +561,7 @@ export const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="pt-40 pb-24 text-center">
+      <div className="pt-20 pb-24 md:pt-40 md:pb-24 text-center">
         <h1 className="text-2xl font-bold">Blog post not found</h1>
         <Link to="/blogs" className="text-[#257995] hover:underline mt-4 inline-block">Back to Blogs</Link>
       </div>
@@ -579,7 +579,7 @@ export const BlogPostPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Header */}
-      <header className="pt-40 pb-16 bg-[#0B1F3A] relative overflow-hidden">
+      <header className="bg-[#0B1F3A] pt-20 pb-16 md:pt-40 md:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
              style={{ backgroundImage: 'radial-gradient(#257995 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
         
